@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gppersonal = new System.Windows.Forms.GroupBox();
-            this.btnconsultar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -47,7 +46,6 @@
             // 
             this.gppersonal.BackColor = System.Drawing.Color.Cyan;
             this.gppersonal.BackgroundImage = global::TotalGymWinFormApp.Properties.Resources.ventanapersonal6;
-            this.gppersonal.Controls.Add(this.btnconsultar);
             this.gppersonal.Controls.Add(this.btneliminar);
             this.gppersonal.Controls.Add(this.textBox4);
             this.gppersonal.Controls.Add(this.textBox3);
@@ -67,22 +65,10 @@
             this.gppersonal.TabStop = false;
             this.gppersonal.Text = "Personal";
             // 
-            // btnconsultar
-            // 
-            this.btnconsultar.BackColor = System.Drawing.Color.DeepPink;
-            this.btnconsultar.Font = new System.Drawing.Font("Code Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
-            this.btnconsultar.ForeColor = System.Drawing.Color.White;
-            this.btnconsultar.Location = new System.Drawing.Point(364, 43);
-            this.btnconsultar.Name = "btnconsultar";
-            this.btnconsultar.Size = new System.Drawing.Size(96, 35);
-            this.btnconsultar.TabIndex = 10;
-            this.btnconsultar.Text = "Consultar";
-            this.btnconsultar.UseVisualStyleBackColor = false;
-            // 
             // btneliminar
             // 
             this.btneliminar.BackColor = System.Drawing.Color.DeepPink;
-            this.btneliminar.Font = new System.Drawing.Font("Code Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.btneliminar.ForeColor = System.Drawing.Color.White;
             this.btneliminar.Location = new System.Drawing.Point(364, 224);
             this.btneliminar.Name = "btneliminar";
@@ -122,7 +108,7 @@
             // btnagregar
             // 
             this.btnagregar.BackColor = System.Drawing.Color.DeepPink;
-            this.btnagregar.Font = new System.Drawing.Font("Code Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.btnagregar.ForeColor = System.Drawing.Color.White;
             this.btnagregar.Location = new System.Drawing.Point(84, 224);
             this.btnagregar.Name = "btnagregar";
@@ -134,40 +120,40 @@
             // lblapellido
             // 
             this.lblapellido.AutoSize = true;
-            this.lblapellido.Font = new System.Drawing.Font("Code Bold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.lblapellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.lblapellido.Location = new System.Drawing.Point(21, 140);
             this.lblapellido.Name = "lblapellido";
-            this.lblapellido.Size = new System.Drawing.Size(63, 13);
+            this.lblapellido.Size = new System.Drawing.Size(66, 16);
             this.lblapellido.TabIndex = 3;
             this.lblapellido.Text = "Apellido";
             // 
             // lblpuesto
             // 
             this.lblpuesto.AutoSize = true;
-            this.lblpuesto.Font = new System.Drawing.Font("Code Bold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.lblpuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.lblpuesto.Location = new System.Drawing.Point(21, 180);
             this.lblpuesto.Name = "lblpuesto";
-            this.lblpuesto.Size = new System.Drawing.Size(50, 13);
+            this.lblpuesto.Size = new System.Drawing.Size(56, 16);
             this.lblpuesto.TabIndex = 2;
             this.lblpuesto.Text = "Puesto";
             // 
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
-            this.lblnombre.Font = new System.Drawing.Font("Code Bold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.lblnombre.Location = new System.Drawing.Point(21, 102);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(54, 13);
+            this.lblnombre.Size = new System.Drawing.Size(63, 16);
             this.lblnombre.TabIndex = 1;
             this.lblnombre.Text = "Nombre";
             // 
             // lblcodigo
             // 
             this.lblcodigo.AutoSize = true;
-            this.lblcodigo.Font = new System.Drawing.Font("Code Bold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.lblcodigo.Location = new System.Drawing.Point(21, 65);
             this.lblcodigo.Name = "lblcodigo";
-            this.lblcodigo.Size = new System.Drawing.Size(58, 13);
+            this.lblcodigo.Size = new System.Drawing.Size(58, 16);
             this.lblcodigo.TabIndex = 0;
             this.lblcodigo.Text = "Codigo";
             // 
@@ -192,7 +178,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gppersonal;
-        private System.Windows.Forms.Button btnconsultar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
