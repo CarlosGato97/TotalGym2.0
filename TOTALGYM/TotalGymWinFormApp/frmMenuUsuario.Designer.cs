@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblInformacion = new System.Windows.Forms.Label();
-            this.btnProducto = new System.Windows.Forms.Button();
+            this.btnRutina = new System.Windows.Forms.Button();
             this.btnEquipo = new System.Windows.Forms.Button();
             this.lblNombreAdmin = new System.Windows.Forms.Label();
             this.lblEtiquetaUsuario = new System.Windows.Forms.Label();
@@ -44,14 +44,14 @@
             this.lblInformacion.TabIndex = 13;
             this.lblInformacion.Text = "Acerca Total Gym 1.0";
             // 
-            // btnProducto
+            // btnRutina
             // 
-            this.btnProducto.Location = new System.Drawing.Point(71, 92);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(117, 28);
-            this.btnProducto.TabIndex = 10;
-            this.btnProducto.Text = "Producto ";
-            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnRutina.Location = new System.Drawing.Point(71, 92);
+            this.btnRutina.Name = "btnRutina";
+            this.btnRutina.Size = new System.Drawing.Size(117, 28);
+            this.btnRutina.TabIndex = 10;
+            this.btnRutina.Text = "Rutinas";
+            this.btnRutina.UseVisualStyleBackColor = true;
             // 
             // btnEquipo
             // 
@@ -83,10 +83,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 175);
+            this.ClientSize = new System.Drawing.Size(301, 175);
             this.ControlBox = false;
             this.Controls.Add(this.lblInformacion);
-            this.Controls.Add(this.btnProducto);
+            this.Controls.Add(this.btnRutina);
             this.Controls.Add(this.btnEquipo);
             this.Controls.Add(this.lblNombreAdmin);
             this.Controls.Add(this.lblEtiquetaUsuario);
@@ -104,7 +104,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblInformacion;
-        private System.Windows.Forms.Button btnProducto;
+        private System.Windows.Forms.Button btnRutina;
         private System.Windows.Forms.Button btnEquipo;
         private System.Windows.Forms.Label lblNombreAdmin;
         private System.Windows.Forms.Label lblEtiquetaUsuario;

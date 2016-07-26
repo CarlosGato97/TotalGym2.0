@@ -30,64 +30,58 @@
         {
             this.gbproductos = new System.Windows.Forms.GroupBox();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.btnconsultar = new System.Windows.Forms.Button();
             this.ckno = new System.Windows.Forms.CheckBox();
             this.cksi = new System.Windows.Forms.CheckBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtcantidad = new System.Windows.Forms.TextBox();
+            this.txtprecio = new System.Windows.Forms.TextBox();
+            this.txtdescripcion = new System.Windows.Forms.TextBox();
+            this.txtnombrepro = new System.Windows.Forms.TextBox();
+            this.txtcodigopro = new System.Windows.Forms.TextBox();
             this.lblexistencia = new System.Windows.Forms.Label();
             this.lblcantidad = new System.Windows.Forms.Label();
             this.lblprecio = new System.Windows.Forms.Label();
             this.lbldescripcion = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblcodigo = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.gbproductos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbproductos
             // 
+            this.gbproductos.Controls.Add(this.btnSalir);
             this.gbproductos.Controls.Add(this.btnagregar);
-            this.gbproductos.Controls.Add(this.btnconsultar);
             this.gbproductos.Controls.Add(this.ckno);
             this.gbproductos.Controls.Add(this.cksi);
-            this.gbproductos.Controls.Add(this.textBox5);
-            this.gbproductos.Controls.Add(this.textBox4);
-            this.gbproductos.Controls.Add(this.textBox3);
-            this.gbproductos.Controls.Add(this.textBox2);
-            this.gbproductos.Controls.Add(this.textBox1);
+            this.gbproductos.Controls.Add(this.txtcantidad);
+            this.gbproductos.Controls.Add(this.txtprecio);
+            this.gbproductos.Controls.Add(this.txtdescripcion);
+            this.gbproductos.Controls.Add(this.txtnombrepro);
+            this.gbproductos.Controls.Add(this.txtcodigopro);
             this.gbproductos.Controls.Add(this.lblexistencia);
             this.gbproductos.Controls.Add(this.lblcantidad);
             this.gbproductos.Controls.Add(this.lblprecio);
             this.gbproductos.Controls.Add(this.lbldescripcion);
             this.gbproductos.Controls.Add(this.lblnombre);
             this.gbproductos.Controls.Add(this.lblcodigo);
-            this.gbproductos.Location = new System.Drawing.Point(12, 28);
+            this.gbproductos.Location = new System.Drawing.Point(12, 12);
             this.gbproductos.Name = "gbproductos";
-            this.gbproductos.Size = new System.Drawing.Size(532, 260);
+            this.gbproductos.Size = new System.Drawing.Size(652, 247);
             this.gbproductos.TabIndex = 0;
             this.gbproductos.TabStop = false;
             this.gbproductos.Text = "Productos";
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(397, 194);
+            this.btnagregar.Location = new System.Drawing.Point(532, 170);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(84, 36);
             this.btnagregar.TabIndex = 14;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
-            // 
-            // btnconsultar
-            // 
-            this.btnconsultar.Location = new System.Drawing.Point(397, 33);
-            this.btnconsultar.Name = "btnconsultar";
-            this.btnconsultar.Size = new System.Drawing.Size(84, 37);
-            this.btnconsultar.TabIndex = 13;
-            this.btnconsultar.Text = "Consultar";
-            this.btnconsultar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // ckno
             // 
@@ -109,40 +103,41 @@
             this.cksi.Text = "Si";
             this.cksi.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txtcantidad
             // 
-            this.textBox5.Location = new System.Drawing.Point(118, 179);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 10;
+            this.txtcantidad.Location = new System.Drawing.Point(118, 179);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtcantidad.TabIndex = 10;
             // 
-            // textBox4
+            // txtprecio
             // 
-            this.textBox4.Location = new System.Drawing.Point(118, 148);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtprecio.Location = new System.Drawing.Point(118, 148);
+            this.txtprecio.Name = "txtprecio";
+            this.txtprecio.Size = new System.Drawing.Size(145, 20);
+            this.txtprecio.TabIndex = 9;
             // 
-            // textBox3
+            // txtdescripcion
             // 
-            this.textBox3.Location = new System.Drawing.Point(118, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtdescripcion.Location = new System.Drawing.Point(118, 115);
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(176, 20);
+            this.txtdescripcion.TabIndex = 8;
             // 
-            // textBox2
+            // txtnombrepro
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtnombrepro.Location = new System.Drawing.Point(118, 82);
+            this.txtnombrepro.Name = "txtnombrepro";
+            this.txtnombrepro.Size = new System.Drawing.Size(206, 20);
+            this.txtnombrepro.TabIndex = 7;
             // 
-            // textBox1
+            // txtcodigopro
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtcodigopro.Location = new System.Drawing.Point(118, 50);
+            this.txtcodigopro.Name = "txtcodigopro";
+            this.txtcodigopro.Size = new System.Drawing.Size(155, 20);
+            this.txtcodigopro.TabIndex = 6;
+            this.txtcodigopro.TextChanged += new System.EventHandler(this.txtcodigopro_TextChanged);
             // 
             // lblexistencia
             // 
@@ -199,19 +194,40 @@
             this.lblcodigo.TabIndex = 0;
             this.lblcodigo.Text = "Codigo Producto";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 265);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(657, 201);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(532, 98);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(84, 37);
+            this.btnSalir.TabIndex = 15;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 310);
+            this.ClientSize = new System.Drawing.Size(676, 478);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbproductos);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmProductos_Load_1);
             this.gbproductos.ResumeLayout(false);
             this.gbproductos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,16 +239,17 @@
         private System.Windows.Forms.Label lblcodigo;
         private System.Windows.Forms.CheckBox ckno;
         private System.Windows.Forms.CheckBox cksi;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtcantidad;
+        private System.Windows.Forms.TextBox txtprecio;
+        private System.Windows.Forms.TextBox txtdescripcion;
+        private System.Windows.Forms.TextBox txtnombrepro;
+        private System.Windows.Forms.TextBox txtcodigopro;
         private System.Windows.Forms.Label lblexistencia;
         private System.Windows.Forms.Label lblcantidad;
         private System.Windows.Forms.Label lblprecio;
         private System.Windows.Forms.Label lbldescripcion;
         private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.Button btnconsultar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
