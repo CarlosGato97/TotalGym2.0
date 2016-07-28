@@ -76,8 +76,17 @@ namespace TotalGymWinFormApp
             C.cargarPersonas(dataGridView1);
 
         }
-      
+
+        private void gbCliente_Enter(object sender, EventArgs e)
+        {
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+    }
     }
 

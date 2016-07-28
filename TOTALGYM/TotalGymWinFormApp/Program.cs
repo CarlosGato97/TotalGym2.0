@@ -16,7 +16,7 @@ namespace TotalGymWinFormApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmProductos());
+            Application.Run(new frmCliente());
         }
     }
 }

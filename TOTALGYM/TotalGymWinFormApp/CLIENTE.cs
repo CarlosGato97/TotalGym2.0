@@ -137,9 +137,26 @@ namespace TotalGymWinFormApp
                 salida = "No se actualizo: " + ex.ToString();
             }
             return salida;
-        
-
+      
         }
+
+        public bool eliminar( string tabla, string condicion)
+        {
+            cn.Open();
+            string sql = "delete from" + tabla + "where" + condicion;
+            cmd = new SqlCommand(sql, cn);
+            int i = cmd.ExecuteNonQuery();
+            cn.Close();
+            if (i > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+     
         }
 
 
