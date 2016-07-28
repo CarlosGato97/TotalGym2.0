@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbproductos = new System.Windows.Forms.GroupBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.ckno = new System.Windows.Forms.CheckBox();
             this.cksi = new System.Windows.Forms.CheckBox();
@@ -44,13 +45,14 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblcodigo = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnver = new System.Windows.Forms.Button();
             this.gbproductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbproductos
             // 
+            this.gbproductos.Controls.Add(this.btnver);
             this.gbproductos.Controls.Add(this.btnSalir);
             this.gbproductos.Controls.Add(this.btnagregar);
             this.gbproductos.Controls.Add(this.ckno);
@@ -72,6 +74,16 @@
             this.gbproductos.TabIndex = 0;
             this.gbproductos.TabStop = false;
             this.gbproductos.Text = "Productos";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(532, 98);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(84, 37);
+            this.btnSalir.TabIndex = 15;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnagregar
             // 
@@ -202,15 +214,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(657, 201);
             this.dataGridView1.TabIndex = 1;
             // 
-            // btnSalir
+            // btnver
             // 
-            this.btnSalir.Location = new System.Drawing.Point(532, 98);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(84, 37);
-            this.btnSalir.TabIndex = 15;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnver.Location = new System.Drawing.Point(532, 34);
+            this.btnver.Name = "btnver";
+            this.btnver.Size = new System.Drawing.Size(84, 39);
+            this.btnver.TabIndex = 16;
+            this.btnver.Text = "Ver";
+            this.btnver.UseVisualStyleBackColor = true;
             // 
             // frmProductos
             // 
@@ -251,5 +262,6 @@
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnver;
     }
 }

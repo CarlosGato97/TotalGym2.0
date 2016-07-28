@@ -29,55 +29,121 @@
         private void InitializeComponent()
         {
             this.gbCliente = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtedad = new System.Windows.Forms.TextBox();
             this.lbEdad = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
             this.lbTelefono = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtdomicilio = new System.Windows.Forms.TextBox();
             this.lbDomicilio = new System.Windows.Forms.Label();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtapellido = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtIdcliente = new System.Windows.Forms.TextBox();
             this.lbApellido = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
             this.llbID = new System.Windows.Forms.Label();
-            this.btnRegresar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.gbCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbCliente
             // 
             this.gbCliente.BackColor = System.Drawing.SystemColors.Control;
-            this.gbCliente.Controls.Add(this.btnRegresar);
-            this.gbCliente.Controls.Add(this.textBox6);
+            this.gbCliente.Controls.Add(this.btnSalir);
+            this.gbCliente.Controls.Add(this.btnAgregar);
+            this.gbCliente.Controls.Add(this.btnModificar);
+            this.gbCliente.Controls.Add(this.dateTimePicker2);
+            this.gbCliente.Controls.Add(this.dateTimePicker1);
+            this.gbCliente.Controls.Add(this.label2);
+            this.gbCliente.Controls.Add(this.label1);
+            this.gbCliente.Controls.Add(this.btnEliminar);
+            this.gbCliente.Controls.Add(this.txtedad);
             this.gbCliente.Controls.Add(this.lbEdad);
-            this.gbCliente.Controls.Add(this.textBox5);
+            this.gbCliente.Controls.Add(this.txttelefono);
             this.gbCliente.Controls.Add(this.lbTelefono);
-            this.gbCliente.Controls.Add(this.textBox4);
+            this.gbCliente.Controls.Add(this.txtdomicilio);
             this.gbCliente.Controls.Add(this.lbDomicilio);
-            this.gbCliente.Controls.Add(this.btnConsultar);
-            this.gbCliente.Controls.Add(this.textBox3);
-            this.gbCliente.Controls.Add(this.textBox2);
-            this.gbCliente.Controls.Add(this.textBox1);
+            this.gbCliente.Controls.Add(this.txtapellido);
+            this.gbCliente.Controls.Add(this.txtnombre);
+            this.gbCliente.Controls.Add(this.txtIdcliente);
             this.gbCliente.Controls.Add(this.lbApellido);
             this.gbCliente.Controls.Add(this.label3);
             this.gbCliente.Controls.Add(this.lbNombre);
             this.gbCliente.Controls.Add(this.llbID);
             this.gbCliente.Location = new System.Drawing.Point(12, 23);
             this.gbCliente.Name = "gbCliente";
-            this.gbCliente.Size = new System.Drawing.Size(333, 276);
+            this.gbCliente.Size = new System.Drawing.Size(338, 340);
             this.gbCliente.TabIndex = 0;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Cliente";
             // 
-            // textBox6
+            // btnModificar
             // 
-            this.textBox6.Location = new System.Drawing.Point(75, 215);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(50, 20);
-            this.textBox6.TabIndex = 13;
+            this.btnModificar.Location = new System.Drawing.Point(241, 73);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(84, 30);
+            this.btnModificar.TabIndex = 18;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(90, 294);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 17;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(90, 257);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 294);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Fecha _Cad";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 257);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Fecha_Activo";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(241, 29);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(84, 28);
+            this.btnEliminar.TabIndex = 1;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtedad
+            // 
+            this.txtedad.Location = new System.Drawing.Point(75, 215);
+            this.txtedad.Name = "txtedad";
+            this.txtedad.Size = new System.Drawing.Size(50, 20);
+            this.txtedad.TabIndex = 13;
             // 
             // lbEdad
             // 
@@ -88,12 +154,12 @@
             this.lbEdad.TabIndex = 12;
             this.lbEdad.Text = "Edad";
             // 
-            // textBox5
+            // txttelefono
             // 
-            this.textBox5.Location = new System.Drawing.Point(75, 181);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 11;
+            this.txttelefono.Location = new System.Drawing.Point(75, 181);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(100, 20);
+            this.txttelefono.TabIndex = 11;
             // 
             // lbTelefono
             // 
@@ -104,12 +170,12 @@
             this.lbTelefono.TabIndex = 10;
             this.lbTelefono.Text = "Telefono";
             // 
-            // textBox4
+            // txtdomicilio
             // 
-            this.textBox4.Location = new System.Drawing.Point(75, 145);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(156, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtdomicilio.Location = new System.Drawing.Point(75, 145);
+            this.txtdomicilio.Name = "txtdomicilio";
+            this.txtdomicilio.Size = new System.Drawing.Size(156, 20);
+            this.txtdomicilio.TabIndex = 9;
             // 
             // lbDomicilio
             // 
@@ -120,35 +186,26 @@
             this.lbDomicilio.TabIndex = 8;
             this.lbDomicilio.Text = "Domicilio";
             // 
-            // btnConsultar
+            // txtapellido
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(241, 30);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
-            this.btnConsultar.TabIndex = 7;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.txtapellido.Location = new System.Drawing.Point(75, 110);
+            this.txtapellido.Name = "txtapellido";
+            this.txtapellido.Size = new System.Drawing.Size(124, 20);
+            this.txtapellido.TabIndex = 6;
             // 
-            // textBox3
+            // txtnombre
             // 
-            this.textBox3.Location = new System.Drawing.Point(75, 110);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtnombre.Location = new System.Drawing.Point(75, 73);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(124, 20);
+            this.txtnombre.TabIndex = 5;
             // 
-            // textBox2
+            // txtIdcliente
             // 
-            this.textBox2.Location = new System.Drawing.Point(75, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(124, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(75, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(82, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtIdcliente.Location = new System.Drawing.Point(75, 37);
+            this.txtIdcliente.Name = "txtIdcliente";
+            this.txtIdcliente.Size = new System.Drawing.Size(82, 20);
+            this.txtIdcliente.TabIndex = 4;
             // 
             // lbApellido
             // 
@@ -185,29 +242,50 @@
             this.llbID.TabIndex = 0;
             this.llbID.Text = "ID cliente";
             // 
-            // btnRegresar
+            // dataGridView1
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(241, 242);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(84, 28);
-            this.btnRegresar.TabIndex = 1;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(381, 33);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(544, 330);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(241, 123);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(84, 30);
+            this.btnAgregar.TabIndex = 19;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(241, 171);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(84, 30);
+            this.btnSalir.TabIndex = 20;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(361, 329);
+            this.ClientSize = new System.Drawing.Size(937, 397);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbCliente);
             this.Name = "frmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.frmCliente_Load);
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,20 +293,27 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbCliente;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtedad;
         private System.Windows.Forms.Label lbEdad;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label lbTelefono;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtdomicilio;
         private System.Windows.Forms.Label lbDomicilio;
-        private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtapellido;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtIdcliente;
         private System.Windows.Forms.Label lbApellido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbNombre;
         private System.Windows.Forms.Label llbID;
-        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

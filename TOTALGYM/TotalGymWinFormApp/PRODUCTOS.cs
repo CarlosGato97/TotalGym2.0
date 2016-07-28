@@ -67,6 +67,7 @@ namespace TotalGymWinFormApp
             {
                 cmd = new SqlCommand("SELECT*FROM PRODUCTOS WHERE COD_PRO=" + COD_PRO + "", cn);
                 dr = cmd.ExecuteReader();
+
                 while (dr.Read())
                 {
                     contador++;
@@ -79,10 +80,7 @@ namespace TotalGymWinFormApp
             }
             return contador;
         }
-
-        
-            
-        
+  
 
         public void cargarPersonas(DataGridView dgv)
         {
