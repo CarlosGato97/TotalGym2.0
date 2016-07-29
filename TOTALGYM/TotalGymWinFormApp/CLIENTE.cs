@@ -54,7 +54,7 @@ namespace TotalGymWinFormApp
             return salida;
         }
 
-        internal string inser(object iD_Cliente, string nombre, string apellido, int edad, int telefono, string domicilio, string fecha_activo, string fecha_cad)
+        internal string inser(object ID_Cliente, string nombre, string apellido, int edad, int telefono, string domicilio, string fecha_activo, string fecha_cad)
         {
             throw new NotImplementedException();
         }
@@ -99,6 +99,8 @@ namespace TotalGymWinFormApp
                 MessageBox.Show("No se pudo llenar:" + ex.ToString());
             }
         }
+
+       
 
         public void llenarTextBoxConsulta(int ID_Cliente, string txtnombre, string txtapellido, string txtedad, string txttelefono, string txtdomicilio, string dateTimePicker1, string dateTimePicker2)
         {
