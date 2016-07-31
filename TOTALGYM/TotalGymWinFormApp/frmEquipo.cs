@@ -21,5 +21,10 @@ namespace TotalGymWinFormApp
         {
 
         }
+
+        private void gbEquipo_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

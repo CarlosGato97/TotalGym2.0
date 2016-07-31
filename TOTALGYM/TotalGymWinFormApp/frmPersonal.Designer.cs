@@ -116,6 +116,7 @@
             this.btnagregar.TabIndex = 4;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = false;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // lblapellido
             // 
@@ -123,7 +124,7 @@
             this.lblapellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.lblapellido.Location = new System.Drawing.Point(21, 140);
             this.lblapellido.Name = "lblapellido";
-            this.lblapellido.Size = new System.Drawing.Size(66, 16);
+            this.lblapellido.Size = new System.Drawing.Size(60, 16);
             this.lblapellido.TabIndex = 3;
             this.lblapellido.Text = "Apellido";
             // 
@@ -133,7 +134,7 @@
             this.lblpuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.lblpuesto.Location = new System.Drawing.Point(21, 180);
             this.lblpuesto.Name = "lblpuesto";
-            this.lblpuesto.Size = new System.Drawing.Size(56, 16);
+            this.lblpuesto.Size = new System.Drawing.Size(50, 16);
             this.lblpuesto.TabIndex = 2;
             this.lblpuesto.Text = "Puesto";
             // 
@@ -143,7 +144,7 @@
             this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.lblnombre.Location = new System.Drawing.Point(21, 102);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(63, 16);
+            this.lblnombre.Size = new System.Drawing.Size(57, 16);
             this.lblnombre.TabIndex = 1;
             this.lblnombre.Text = "Nombre";
             // 
@@ -153,7 +154,7 @@
             this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.lblcodigo.Location = new System.Drawing.Point(21, 65);
             this.lblcodigo.Name = "lblcodigo";
-            this.lblcodigo.Size = new System.Drawing.Size(58, 16);
+            this.lblcodigo.Size = new System.Drawing.Size(52, 16);
             this.lblcodigo.TabIndex = 0;
             this.lblcodigo.Text = "Codigo";
             // 

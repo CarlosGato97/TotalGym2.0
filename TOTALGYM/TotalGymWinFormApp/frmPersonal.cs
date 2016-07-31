@@ -16,5 +16,10 @@ namespace TotalGymWinFormApp
         {
             InitializeComponent();
         }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
