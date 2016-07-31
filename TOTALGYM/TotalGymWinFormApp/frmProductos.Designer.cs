@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbproductos = new System.Windows.Forms.GroupBox();
+            this.btnver = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.ckno = new System.Windows.Forms.CheckBox();
@@ -45,13 +46,14 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblcodigo = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnver = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.gbproductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbproductos
             // 
+            this.gbproductos.Controls.Add(this.btnRegresar);
             this.gbproductos.Controls.Add(this.btnver);
             this.gbproductos.Controls.Add(this.btnSalir);
             this.gbproductos.Controls.Add(this.btnagregar);
@@ -70,10 +72,19 @@
             this.gbproductos.Controls.Add(this.lblcodigo);
             this.gbproductos.Location = new System.Drawing.Point(12, 12);
             this.gbproductos.Name = "gbproductos";
-            this.gbproductos.Size = new System.Drawing.Size(652, 247);
+            this.gbproductos.Size = new System.Drawing.Size(652, 280);
             this.gbproductos.TabIndex = 0;
             this.gbproductos.TabStop = false;
             this.gbproductos.Text = "Productos";
+            // 
+            // btnver
+            // 
+            this.btnver.Location = new System.Drawing.Point(532, 34);
+            this.btnver.Name = "btnver";
+            this.btnver.Size = new System.Drawing.Size(84, 39);
+            this.btnver.TabIndex = 16;
+            this.btnver.Text = "Ver";
+            this.btnver.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
@@ -209,25 +220,26 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 265);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 298);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(657, 201);
             this.dataGridView1.TabIndex = 1;
             // 
-            // btnver
+            // btnRegresar
             // 
-            this.btnver.Location = new System.Drawing.Point(532, 34);
-            this.btnver.Name = "btnver";
-            this.btnver.Size = new System.Drawing.Size(84, 39);
-            this.btnver.TabIndex = 16;
-            this.btnver.Text = "Ver";
-            this.btnver.UseVisualStyleBackColor = true;
+            this.btnRegresar.Location = new System.Drawing.Point(532, 238);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(84, 36);
+            this.btnRegresar.TabIndex = 17;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 478);
+            this.ClientSize = new System.Drawing.Size(676, 511);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbproductos);
@@ -263,5 +275,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnver;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

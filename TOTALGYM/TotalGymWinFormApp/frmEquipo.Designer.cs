@@ -30,27 +30,33 @@
         {
             this.gbEquipo = new System.Windows.Forms.GroupBox();
             this.lbCantidad = new System.Windows.Forms.Label();
-            this.lbDescripcion = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lbNombre = new System.Windows.Forms.Label();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.lbCode = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.gbEquipo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // gbEquipo
             // 
+            this.gbEquipo.Controls.Add(this.btnModificar);
+            this.gbEquipo.Controls.Add(this.btnEliminar);
+            this.gbEquipo.Controls.Add(this.btnRegresar);
+            this.gbEquipo.Controls.Add(this.btnAgregar);
+            this.gbEquipo.Controls.Add(this.btnSalir);
             this.gbEquipo.Controls.Add(this.lbCantidad);
-            this.gbEquipo.Controls.Add(this.lbDescripcion);
-            this.gbEquipo.Controls.Add(this.textBox4);
-            this.gbEquipo.Controls.Add(this.textBox3);
-            this.gbEquipo.Controls.Add(this.textBox2);
+            this.gbEquipo.Controls.Add(this.txtCantidad);
+            this.gbEquipo.Controls.Add(this.txtNombre);
             this.gbEquipo.Controls.Add(this.lbNombre);
-            this.gbEquipo.Controls.Add(this.btnConsultar);
-            this.gbEquipo.Controls.Add(this.textBox1);
+            this.gbEquipo.Controls.Add(this.txtCod);
             this.gbEquipo.Controls.Add(this.lbCode);
             this.gbEquipo.Location = new System.Drawing.Point(12, 30);
             this.gbEquipo.Name = "gbEquipo";
@@ -62,41 +68,25 @@
             // lbCantidad
             // 
             this.lbCantidad.AutoSize = true;
-            this.lbCantidad.Location = new System.Drawing.Point(6, 159);
+            this.lbCantidad.Location = new System.Drawing.Point(6, 133);
             this.lbCantidad.Name = "lbCantidad";
             this.lbCantidad.Size = new System.Drawing.Size(49, 13);
             this.lbCantidad.TabIndex = 8;
             this.lbCantidad.Text = "Cantidad";
             // 
-            // lbDescripcion
+            // txtCantidad
             // 
-            this.lbDescripcion.AutoSize = true;
-            this.lbDescripcion.Location = new System.Drawing.Point(6, 116);
-            this.lbDescripcion.Name = "lbDescripcion";
-            this.lbDescripcion.Size = new System.Drawing.Size(63, 13);
-            this.lbDescripcion.TabIndex = 7;
-            this.lbDescripcion.Text = "Descripcion";
+            this.txtCantidad.Location = new System.Drawing.Point(97, 133);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.TabIndex = 6;
             // 
-            // textBox4
+            // txtNombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(97, 159);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(97, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(97, 33);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtNombre.Location = new System.Drawing.Point(97, 33);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(133, 20);
+            this.txtNombre.TabIndex = 4;
             // 
             // lbNombre
             // 
@@ -107,37 +97,87 @@
             this.lbNombre.TabIndex = 3;
             this.lbNombre.Text = "Nombre";
             // 
-            // btnConsultar
+            // txtCod
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(257, 33);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 23);
-            this.btnConsultar.TabIndex = 2;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(97, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(75, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtCod.Location = new System.Drawing.Point(97, 84);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(75, 20);
+            this.txtCod.TabIndex = 1;
             // 
             // lbCode
             // 
             this.lbCode.AutoSize = true;
-            this.lbCode.Location = new System.Drawing.Point(6, 76);
+            this.lbCode.Location = new System.Drawing.Point(6, 91);
             this.lbCode.Name = "lbCode";
             this.lbCode.Size = new System.Drawing.Size(75, 13);
             this.lbCode.TabIndex = 0;
             this.lbCode.Text = "Codigo equipo";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(189, 214);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(270, 136);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // dgv
+            // 
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(383, 30);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(377, 237);
+            this.dgv.TabIndex = 1;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(75, 214);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresar.TabIndex = 11;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(270, 33);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(270, 86);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 13;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // frmEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 279);
+            this.ClientSize = new System.Drawing.Size(762, 279);
             this.ControlBox = false;
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.gbEquipo);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -147,6 +187,7 @@
             this.Load += new System.EventHandler(this.frmEquipo_Load);
             this.gbEquipo.ResumeLayout(false);
             this.gbEquipo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,13 +196,16 @@
 
         private System.Windows.Forms.GroupBox gbEquipo;
         private System.Windows.Forms.Label lbCantidad;
-        private System.Windows.Forms.Label lbDescripcion;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lbNombre;
-        private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.Label lbCode;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

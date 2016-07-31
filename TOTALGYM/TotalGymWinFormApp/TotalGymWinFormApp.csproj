@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLIENTE.cs" />
+    <Compile Include="EQUIPO.cs" />
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +146,40 @@
   <ItemGroup>
     <Content Include="bin\Debug\TotalGymWinFormApp.vshost.exe" />
     <Content Include="obj\Debug\TotalGymWinFormApp.csproj.FileListAbsolute.txt" />
+    <Content Include="Resources\cliente.jpg" />
+    <Content Include="Resources\cliente2.jpg" />
+    <Content Include="Resources\cliente3.jpg" />
+    <Content Include="Resources\cliente4.jpg" />
+    <Content Include="Resources\cliente6.jpg" />
+    <Content Include="Resources\cliente7.jpg" />
+    <Content Include="Resources\cliente8.jpg" />
+    <Content Include="Resources\cliente9.jpg" />
+    <Content Include="Resources\subcliente1.jpg" />
+    <Content Include="Resources\subcliente2.jpg" />
+    <Content Include="Resources\subcliente3.jpg" />
+    <Content Include="Resources\subcliente4.jpg" />
+    <Content Include="Resources\ventaanproductos1.jpg" />
+    <Content Include="Resources\ventanaequipo1.jpg" />
+    <Content Include="Resources\ventanaequipo2.jpg" />
+    <Content Include="Resources\ventanaequipo3.jpg" />
+    <Content Include="Resources\ventanaequipo4.jpg" />
+    <Content Include="Resources\ventanaequipo5.jpg" />
+    <Content Include="Resources\ventanaequipo6.jpg" />
+    <Content Include="Resources\ventanaequipo7.jpg" />
+    <Content Include="Resources\ventanaequipo8.jpg" />
+    <Content Include="Resources\ventanalogin1.jpg" />
+    <Content Include="Resources\ventanalogin2.jpg" />
+    <Content Include="Resources\ventanalogin3.jpg" />
+    <Content Include="Resources\ventanalogin4.jpg" />
+    <Content Include="Resources\ventanalogin5.jpg" />
+    <Content Include="Resources\ventanalogin6.jpg" />
+    <Content Include="Resources\ventanapersonal1.jpg" />
+    <Content Include="Resources\ventanapersonal2.jpg" />
+    <Content Include="Resources\ventanapersonal4.jpg" />
+    <Content Include="Resources\ventanapersonal5.jpg" />
+    <Content Include="Resources\ventanapersonal6.jpg" />
+    <Content Include="Resources\ventanaproductos2.jpg" />
+    <Content Include="Resources\ventanaproductos3.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">

@@ -39,13 +39,19 @@
             this.lblpuesto = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblcodigo = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gppersonal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gppersonal
             // 
             this.gppersonal.BackColor = System.Drawing.Color.Cyan;
             this.gppersonal.BackgroundImage = global::TotalGymWinFormApp.Properties.Resources.ventanapersonal6;
+            this.gppersonal.Controls.Add(this.btnRegresar);
+            this.gppersonal.Controls.Add(this.btnSalir);
             this.gppersonal.Controls.Add(this.btneliminar);
             this.gppersonal.Controls.Add(this.textBox4);
             this.gppersonal.Controls.Add(this.textBox3);
@@ -58,9 +64,9 @@
             this.gppersonal.Controls.Add(this.lblcodigo);
             this.gppersonal.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gppersonal.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.gppersonal.Location = new System.Drawing.Point(12, 31);
+            this.gppersonal.Location = new System.Drawing.Point(12, 12);
             this.gppersonal.Name = "gppersonal";
-            this.gppersonal.Size = new System.Drawing.Size(506, 274);
+            this.gppersonal.Size = new System.Drawing.Size(537, 331);
             this.gppersonal.TabIndex = 0;
             this.gppersonal.TabStop = false;
             this.gppersonal.Text = "Personal";
@@ -70,9 +76,9 @@
             this.btneliminar.BackColor = System.Drawing.Color.DeepPink;
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.btneliminar.ForeColor = System.Drawing.Color.White;
-            this.btneliminar.Location = new System.Drawing.Point(364, 224);
+            this.btneliminar.Location = new System.Drawing.Point(432, 233);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(96, 37);
+            this.btneliminar.Size = new System.Drawing.Size(89, 37);
             this.btneliminar.TabIndex = 9;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = false;
@@ -110,7 +116,7 @@
             this.btnagregar.BackColor = System.Drawing.Color.DeepPink;
             this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.btnagregar.ForeColor = System.Drawing.Color.White;
-            this.btnagregar.Location = new System.Drawing.Point(84, 224);
+            this.btnagregar.Location = new System.Drawing.Point(432, 20);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(89, 37);
             this.btnagregar.TabIndex = 4;
@@ -157,13 +163,46 @@
             this.lblcodigo.TabIndex = 0;
             this.lblcodigo.Text = "Codigo";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.DeepPink;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(432, 83);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(89, 37);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.DeepPink;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.Location = new System.Drawing.Point(432, 159);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(89, 37);
+            this.btnRegresar.TabIndex = 11;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 349);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(537, 196);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // frmPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(530, 317);
+            this.ClientSize = new System.Drawing.Size(557, 557);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gppersonal);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -171,6 +210,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.gppersonal.ResumeLayout(false);
             this.gppersonal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +228,8 @@
         private System.Windows.Forms.Label lblpuesto;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lblcodigo;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
