@@ -29,34 +29,36 @@
         private void InitializeComponent()
         {
             this.gppersonal = new System.Windows.Forms.GroupBox();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtArea = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnagregar = new System.Windows.Forms.Button();
             this.lblapellido = new System.Windows.Forms.Label();
             this.lblpuesto = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblcodigo = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.gppersonal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // gppersonal
             // 
             this.gppersonal.BackColor = System.Drawing.Color.Cyan;
             this.gppersonal.BackgroundImage = global::TotalGymWinFormApp.Properties.Resources.ventanapersonal6;
+            this.gppersonal.Controls.Add(this.btnModificar);
             this.gppersonal.Controls.Add(this.btnRegresar);
             this.gppersonal.Controls.Add(this.btnSalir);
             this.gppersonal.Controls.Add(this.btneliminar);
-            this.gppersonal.Controls.Add(this.textBox4);
-            this.gppersonal.Controls.Add(this.textBox3);
-            this.gppersonal.Controls.Add(this.textBox2);
-            this.gppersonal.Controls.Add(this.textBox1);
+            this.gppersonal.Controls.Add(this.txtArea);
+            this.gppersonal.Controls.Add(this.txtApellido);
+            this.gppersonal.Controls.Add(this.txtNombre);
+            this.gppersonal.Controls.Add(this.txtCodigo);
             this.gppersonal.Controls.Add(this.btnagregar);
             this.gppersonal.Controls.Add(this.lblapellido);
             this.gppersonal.Controls.Add(this.lblpuesto);
@@ -66,62 +68,90 @@
             this.gppersonal.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.gppersonal.Location = new System.Drawing.Point(12, 12);
             this.gppersonal.Name = "gppersonal";
-            this.gppersonal.Size = new System.Drawing.Size(537, 331);
+            this.gppersonal.Size = new System.Drawing.Size(467, 331);
             this.gppersonal.TabIndex = 0;
             this.gppersonal.TabStop = false;
             this.gppersonal.Text = "Personal";
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.DeepPink;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.Location = new System.Drawing.Point(370, 140);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(89, 37);
+            this.btnRegresar.TabIndex = 11;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.DeepPink;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(370, 83);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(89, 37);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btneliminar
             // 
             this.btneliminar.BackColor = System.Drawing.Color.DeepPink;
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.btneliminar.ForeColor = System.Drawing.Color.White;
-            this.btneliminar.Location = new System.Drawing.Point(432, 233);
+            this.btneliminar.Location = new System.Drawing.Point(370, 213);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(89, 37);
             this.btneliminar.TabIndex = 9;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
-            // textBox4
+            // txtArea
             // 
-            this.textBox4.Location = new System.Drawing.Point(84, 180);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(182, 21);
-            this.textBox4.TabIndex = 8;
+            this.txtArea.Location = new System.Drawing.Point(84, 180);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(182, 21);
+            this.txtArea.TabIndex = 8;
             // 
-            // textBox3
+            // txtApellido
             // 
-            this.textBox3.Location = new System.Drawing.Point(84, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(252, 21);
-            this.textBox3.TabIndex = 7;
+            this.txtApellido.Location = new System.Drawing.Point(84, 140);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(252, 21);
+            this.txtApellido.TabIndex = 7;
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(84, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 21);
-            this.textBox2.TabIndex = 6;
+            this.txtNombre.Location = new System.Drawing.Point(84, 99);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(213, 21);
+            this.txtNombre.TabIndex = 6;
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 21);
-            this.textBox1.TabIndex = 5;
+            this.txtCodigo.Location = new System.Drawing.Point(84, 65);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(159, 21);
+            this.txtCodigo.TabIndex = 5;
             // 
             // btnagregar
             // 
             this.btnagregar.BackColor = System.Drawing.Color.DeepPink;
             this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
             this.btnagregar.ForeColor = System.Drawing.Color.White;
-            this.btnagregar.Location = new System.Drawing.Point(432, 20);
+            this.btnagregar.Location = new System.Drawing.Point(370, 20);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(89, 37);
             this.btnagregar.TabIndex = 4;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = false;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // lblapellido
             // 
@@ -163,54 +193,45 @@
             this.lblcodigo.TabIndex = 0;
             this.lblcodigo.Text = "Codigo";
             // 
-            // btnSalir
+            // dgv
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.DeepPink;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(432, 83);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(89, 37);
-            this.btnSalir.TabIndex = 10;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(12, 349);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(467, 196);
+            this.dgv.TabIndex = 1;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // btnRegresar
+            // btnModificar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.DeepPink;
-            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
-            this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(432, 159);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(89, 37);
-            this.btnRegresar.TabIndex = 11;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 349);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(537, 196);
-            this.dataGridView1.TabIndex = 1;
+            this.btnModificar.BackColor = System.Drawing.Color.DeepPink;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(370, 270);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(89, 37);
+            this.btnModificar.TabIndex = 12;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // frmPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(557, 557);
+            this.ClientSize = new System.Drawing.Size(489, 557);
             this.ControlBox = false;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.gppersonal);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPersonal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmPersonal_Load);
             this.gppersonal.ResumeLayout(false);
             this.gppersonal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,10 +240,10 @@
 
         private System.Windows.Forms.GroupBox gppersonal;
         private System.Windows.Forms.Button btneliminar;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtArea;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Label lblapellido;
         private System.Windows.Forms.Label lblpuesto;
@@ -230,6 +251,7 @@
         private System.Windows.Forms.Label lblcodigo;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegresar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
