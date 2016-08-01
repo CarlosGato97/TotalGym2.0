@@ -16,5 +16,10 @@ namespace TotalGymWinFormApp
         {
             InitializeComponent();
         }
+
+        private void btnEquipo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

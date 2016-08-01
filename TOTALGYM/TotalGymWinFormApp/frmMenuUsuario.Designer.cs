@@ -61,6 +61,7 @@
             this.btnEquipo.TabIndex = 9;
             this.btnEquipo.Text = "Equipo";
             this.btnEquipo.UseVisualStyleBackColor = true;
+            this.btnEquipo.Click += new System.EventHandler(this.btnEquipo_Click);
             // 
             // lblNombreAdmin
             // 
