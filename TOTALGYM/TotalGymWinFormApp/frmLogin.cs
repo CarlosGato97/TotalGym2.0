@@ -28,7 +28,7 @@ namespace TotalGymWinFormApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -39,31 +39,41 @@ namespace TotalGymWinFormApp
             string pass = txtContraseña.Text;
             string tipo;
             string pass2;
+           
 
            string cadena=("select ID_Cliente,Contraseña, Tipo from TIPO where ID_Cliente="+user);
             SqlCommand comando = new SqlCommand(cadena,conexion);
             SqlDataReader read = comando.ExecuteReader();
 
-            if (read.Read()) {
-               pass2 = read["Contraseña"].ToString();
-               tipo= read["tipo"].ToString();
-                if (pass2==txtContraseña.Text){
-                    if(tipo=="administrador"){
+            if (read.Read())
+            {
+
+                pass2 = read["Contraseña"].ToString();
+                tipo = read["tipo"].ToString();
+                if (pass2 == txtContraseña.Text)
+                {
+                    if (tipo == "administrador")
+                    {
                         frmMenuAdmin add = new frmMenuAdmin();
                         add.Show();
                         this.Hide();
                     }
-                    if (tipo=="Usuario") {
+                    if (tipo == "Usuario")
+                    {
                         frmMenuAdmin add = new frmMenuAdmin();
                         add.Show();
                         this.Hide();
                     }
-                    if (tipo=="cliente") {
+                    if (tipo == "cliente")
+                    {
                         frmMenuPrincipal prin = new frmMenuPrincipal();
-                      prin.Show();
+                        prin.Show();
                         this.Hide();
                     }
                 }
+            }
+            else {
+                MessageBox.Show("!Usuario/Contraseña incorrectos,Verifique bien los datos¡");
             }
 
 
