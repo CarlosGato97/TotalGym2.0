@@ -45,14 +45,12 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblcodigo = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnver = new System.Windows.Forms.Button();
             this.gbproductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbproductos
             // 
-            this.gbproductos.Controls.Add(this.btnver);
             this.gbproductos.Controls.Add(this.btnSalir);
             this.gbproductos.Controls.Add(this.btnagregar);
             this.gbproductos.Controls.Add(this.ckno);
@@ -77,7 +75,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(532, 98);
+            this.btnSalir.Location = new System.Drawing.Point(532, 50);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(84, 37);
             this.btnSalir.TabIndex = 15;
@@ -87,7 +85,7 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(532, 170);
+            this.btnagregar.Location = new System.Drawing.Point(532, 122);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(84, 36);
             this.btnagregar.TabIndex = 14;
@@ -214,15 +212,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(657, 201);
             this.dataGridView1.TabIndex = 1;
             // 
-            // btnver
-            // 
-            this.btnver.Location = new System.Drawing.Point(532, 34);
-            this.btnver.Name = "btnver";
-            this.btnver.Size = new System.Drawing.Size(84, 39);
-            this.btnver.TabIndex = 16;
-            this.btnver.Text = "Ver";
-            this.btnver.UseVisualStyleBackColor = true;
-            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,6 +251,5 @@
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnver;
     }
 }
