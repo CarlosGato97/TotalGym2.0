@@ -16,5 +16,26 @@ namespace TotalGymWinFormApp
         {
             InitializeComponent();
         }
+
+        private void btnEquipo_Click(object sender, EventArgs e)
+        {
+            frmEQUIPOS U = new frmEQUIPOS();
+            U.Show();
+            this.Hide();
+        }
+
+        private void btnRutina_Click(object sender, EventArgs e)
+        {
+            frmRutina R = new frmRutina();
+            R.Show();
+            this.Hide();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
     }
 }

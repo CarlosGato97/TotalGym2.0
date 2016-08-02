@@ -8,47 +8,47 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
+
 namespace TotalGymWinFormApp
 {
-    class PRODUCTOS
+    class PERSONAL
     {
-        SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=TOTALGYM;Integrated Security=True");
-
+        SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=TOTALGYM;Integrated Security=True");
         private SqlCommandBuilder cmb;
         public DataSet ds = new DataSet();
         public SqlDataAdapter da = new SqlDataAdapter();
         public SqlCommand comando;
-
         public void conectar()
         {
             try
             {
-                cn.Open();
+                con.Open();
                 MessageBox.Show("conectado");
             }
             catch
             {
-                MessageBox.Show("Error al conectar");
-
+                MessageBox.Show("error al conectar");
             }
             finally
             {
-                cn.Close();
+                con.Close();
             }
+
         }
         public void consulta(string sql, string tabla)
         {
             ds.Tables.Clear();
-            da = new SqlDataAdapter(sql, cn);
+            da = new SqlDataAdapter(sql, con);
             cmb = new SqlCommandBuilder(da);
             da.Fill(ds, tabla);
+
         }
         public bool agregar(string sql)
         {
-            cn.Open();
-            comando = new SqlCommand(sql, cn);
+            con.Open();
+            comando = new SqlCommand(sql, con);
             int i = comando.ExecuteNonQuery();
-            cn.Close();
+            con.Close();
             if (i > 0)
             {
                 return true;
@@ -61,11 +61,11 @@ namespace TotalGymWinFormApp
         }
         public bool eliminar(string tabla, string condicion)
         {
-            cn.Open();
+            con.Open();
             string eliminar = "delete from " + tabla + " where " + condicion;
-            comando = new SqlCommand(eliminar, cn);
+            comando = new SqlCommand(eliminar, con);
             int i = comando.ExecuteNonQuery();
-            cn.Close();
+            con.Close();
 
             if (i > 0)
             {
@@ -78,11 +78,11 @@ namespace TotalGymWinFormApp
         }
         public bool modificar(string tabla, string campos, string condicion)
         {
-            cn.Open();
+            con.Open();
             string modificar = " update " + tabla + " set " + campos + " where " + condicion;
-            comando = new SqlCommand(modificar, cn);
+            comando = new SqlCommand(modificar, con);
             int i = comando.ExecuteNonQuery();
-            cn.Close();
+            con.Close();
             if (i > 0)
             {
                 return true;
@@ -92,10 +92,8 @@ namespace TotalGymWinFormApp
                 return false;
             }
         }
+    }
 
-
-
-
-
-        }
 }
+
+

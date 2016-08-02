@@ -32,9 +32,6 @@ namespace TotalGymWinFormApp
             C.conectar();
             mostrarDatos();
 
-        
-
-
         }
         public void mostrarDatos()
         {
@@ -152,10 +149,15 @@ namespace TotalGymWinFormApp
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            frmMenuAdmin a = new  frmMenuAdmin();
+            frmMenuUsuario a = new  frmMenuUsuario();
             a.Show();
 
             this.Close();
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

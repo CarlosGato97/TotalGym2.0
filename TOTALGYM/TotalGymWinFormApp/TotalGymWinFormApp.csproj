@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLIENTE.cs" />
+    <Compile Include="EQUIPO.cs" />
+    <Compile Include="EXISTENTES.cs" />
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +59,12 @@
     </Compile>
     <Compile Include="frmEquipo.Designer.cs">
       <DependentUpon>frmEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEQUIPOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEQUIPOS.Designer.cs">
+      <DependentUpon>frmEQUIPOS.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -88,17 +96,28 @@
     <Compile Include="frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRutina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRutina.Designer.cs">
+      <DependentUpon>frmRutina.cs</DependentUpon>
+    </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="PERSONAL.cs" />
     <Compile Include="PRODUCTOS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RUTINA.cs" />
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEquipo.resx">
       <DependentUpon>frmEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEQUIPOS.resx">
+      <DependentUpon>frmEQUIPOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -114,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRutina.resx">
+      <DependentUpon>frmRutina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
