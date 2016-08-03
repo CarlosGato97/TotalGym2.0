@@ -12,96 +12,88 @@ namespace TotalGymWinFormApp
 {
     class EQUIPO
     {
-        SqlConnection cn;
-        SqlCommand cmd;
-        SqlDataReader dr;
-        SqlDataAdapter da;
-        DataTable dt;
-
-        public EQUIPO()
+        SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=TOTALGYM;Integrated Security=True");
+        private SqlCommandBuilder cmb;
+        public DataSet ds = new DataSet();
+        public SqlDataAdapter da = new SqlDataAdapter();
+        public SqlCommand comando;
+        public void conectar()
+        {
+            try
             {
-              try
+                con.Open();
+                MessageBox.Show("conectado");
+            }
+            catch
+            {
+                MessageBox.Show("error al conectar");
+            }
+            finally
+            {
+                con.Close();
+            }
+        
+            }
+        public void consulta(string sql, string tabla)
+        {
+            ds.Tables.Clear();
+            da = new SqlDataAdapter(sql, con);
+            cmb = new SqlCommandBuilder(da);
+            da.Fill(ds, tabla);
+        }
+        public bool agregar(string sql)
+        {
+            con.Open();
+            comando = new SqlCommand(sql, con);
+            int i = comando.ExecuteNonQuery();
+            con.Close();
+            if (i > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+        }
+  
+      
+          public bool eliminar(string tabla, string condicion)
+          {
+              con.Open();
+              string eliminar = "delete from " + tabla + " where " + condicion;
+              comando = new SqlCommand(eliminar, con);
+              int i = comando.ExecuteNonQuery();
+              con.Close();
+
+              if (i > 0)
               {
-                  cn = new SqlConnection("Data Source=(local);Initial Catalog=TOTALGYM;Integrated Security=True");
-                  cn.Open();
-                  MessageBox.Show("conectado");
+                  return true;
               }
-              catch (Exception ex)
+              else
               {
-                  MessageBox.Show("No se establecio la conexion:" + ex.ToString());
+                  return false;
               }
-            }
-        internal void conectar()
-        {
-            throw new NotImplementedException();
-        }
-        public string insertar(int COD_EQUIPO, int CANTIDAD, string NOM_EQUIPO)
-        {
-            string salida = "Se se inserto";
-            try
-            {
-                cmd = new SqlCommand("Insert into EQUIPO(COD_EQUIPO,CANTIDAD,NOM_EQUIPO) values(" + COD_EQUIPO + "," + CANTIDAD + ",'" + NOM_EQUIPO + "')", cn);
-                cmd.ExecuteNonQuery();
-                return salida;
-            }
-            catch (Exception ex)
-            {
-                salida = "No se conecto: " + ex.ToString();
-                return salida;
-            }
+          }
+          public bool modificar(string tabla, string campos, string condicion)
+          {
+              con.Open();
+              string modificar = " update " + tabla + " set " + campos + " where " + condicion;
+              comando = new SqlCommand(modificar, con);
+              int i = comando.ExecuteNonQuery();
+              con.Close();
+              if (i > 0)
+              {
+                  return true;
+              }
+              else
+              {
+                  return false;
+              }
 
-        }
-        public int personaRegistrada(int COD_EQUIPO)
-        {
-            int contador = 0;
-            try
-            {
-                cmd = new SqlCommand("select*from EQUIPO where COD_EQUIPO=" + COD_EQUIPO + "", cn);
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    contador++;
-                }
-                dr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo consultar bien: " + ex.ToString());
-            }
-            return contador;
-        }
-        public void cargarPersonas(DataGridView dgv)
-        {
-            try
-            {
-                da = new SqlDataAdapter("Select * from EQUIPO", cn);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgv.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo llenar el Datagridview: " + ex.ToString());
-            }
-        }
-        public void llenarTexBoxConsulta(int COD_EQUIPO, string txtNombre, int txtCod, int txtCantidad)
-        {
-            try
-            {
-                cmd = new SqlCommand("Select * from EQUIPO where COD_EQUIPO=" + COD_EQUIPO + "", cn);
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    txtNombre = dr["NOM_EQUIPO"].ToString();
 
-                }
-                dr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo llenar los campos: " + ex.ToString());
-            }
-        }
+          }
     }
 
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
+
 using System.Data.Sql;
 using System.Data.SqlClient;
 
@@ -24,13 +24,28 @@ namespace TotalGymWinFormApp
 
         private void frmEquipo_Load(object sender, EventArgs e)
         {
-            EQUIPO c = new EQUIPO();
-            c.cargarPersonas(dgv);
+            c.conectar();
+            mostrarDatos();
+            
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (c.eliminar("EQUIPO", "COD_EQUIPO =" + txtCod.Text))
+            {
+                MessageBox.Show("Se elimino correctamente");
+                 txtCod.Text = "";
+                 txtCantidad.Text = "";
+                 txtNombre.Text = "";
+                 mostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo eliminar");
 
+
+            }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -48,37 +63,61 @@ namespace TotalGymWinFormApp
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (c.personaRegistrada(Convert.ToInt32(txtCod.Text)) == 0)
+            string agregar = "insert into EQUIPO values(" + txtCod.Text + "," + txtCantidad.Text + ",'" + txtNombre.Text + "')";
+           if(c.agregar(agregar))
             {
-
-                string nombre = txtNombre.Text;
-
-
-                int codigo = Convert.ToInt32(txtCod.Text);
-                int cantidad = Convert.ToInt32(txtCantidad.Text);
-
-                MessageBox.Show(c.insertar(codigo, cantidad, nombre));
-                c.cargarPersonas(dgv);
+                MessageBox.Show("se agrego correctamente");
                 txtCod.Text = "";
-                txtNombre.Text = "";
                 txtCantidad.Text = "";
+                txtNombre.Text = "";
+                mostrarDatos();
             }
             else
             {
-                MessageBox.Show("Imposible de regitrar, El registro ya existe");
+                MessageBox.Show("no se pudo agregar");
             }
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            string actualizar = "update EQUIPO set CANTIDAD=" + txtCantidad.Text + " where COD_EQUIPO=" + txtCod;
+            string actualizar = "COD_EQUIPO=" + txtCod.Text + ",CANTIDAD=" + txtCantidad.Text + ", NOM_EQUIPO='" + txtNombre.Text + "'";
+            if (c.modificar("EQUIPO", actualizar, "COD_EQUIPO=" +txtCod.Text))
+            {
+                MessageBox.Show("Se modifico correctamente");
+                mostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo modificar");
+            }
 
-         
         }
 
         private void gbEquipo_Enter(object sender, EventArgs e)
         {
 
         }
+
+        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow datagrid = dgv.Rows[e.RowIndex];
+            txtNombre.Text = datagrid.Cells[2].Value.ToString();
+            txtCod.Text = datagrid.Cells[0].Value.ToString();
+            txtCantidad.Text = datagrid.Cells[1].Value.ToString();
+
+        }
+
+        public void mostrarDatos()
+        {
+            c.consulta("select*from EQUIPO", "EQUIPO");
+            dgv.DataSource = c.ds.Tables["EQUIPO"];
+
+        }
+
     }
+
+
+
 }
+
