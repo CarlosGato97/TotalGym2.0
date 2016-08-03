@@ -54,7 +54,7 @@ namespace TotalGymWinFormApp
                         this.Hide();
                     }
                     if (tipo=="Usuario") {
-                        frmMenuUsuario add = new frmMenuUsuario();
+                        frmMenuPrincipal add = new frmMenuPrincipal();
                         add.Show();
                         this.Hide();
                     }
@@ -69,7 +69,10 @@ namespace TotalGymWinFormApp
 
 
         }
-      
-            
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
+    }
     }
