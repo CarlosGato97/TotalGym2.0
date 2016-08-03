@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TotalGymWinFormApp
 {
-    public partial class frmMenuAdmin : Form
+    public partial class frmMenuUsuario : Form
     {
-        public frmMenuAdmin()
+        public frmMenuUsuario()
         {
             InitializeComponent();
         }

@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace TotalGymWinFormApp
 {
     public partial class frmCliente : Form
     {
+       
         CLIENTE C = new CLIENTE();
         public frmCliente()
         {
@@ -20,40 +23,39 @@ namespace TotalGymWinFormApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmMenuAdmin administrador = new frmMenuAdmin();
-            administrador.Show();
-            this.Hide();
-
+            
         }
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            CLIENTE C = new CLIENTE();
-            C.cargarPersonas(dataGridView1);
+
+            C.conectar();
+            mostrarDatos();
 
         }
+        public void mostrarDatos()
+        {
+            C.consulta("select*from Clientes", "Clientes");
+            dataGridView1.DataSource = C.ds.Tables["Clientes"];
+            
+        }
+       
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (C.registradas(Convert.ToInt32(txtIdcliente.Text)) == 0)
+            string agregar = "insert into Clientes values(" + txtIdcliente.Text + ",'" + txtnombre.Text + "','" + txtapellido.Text + "'," + txtedad.Text + "," + txttelefono.Text + ",'" + txtdomicilio.Text + "','"+txtfecha_activo.Text+"','"+txtfecha_cad.Text+"')";
+            if (C.agregar(agregar))
             {
-                int ID_Cliente = Convert.ToInt32(txtIdcliente.Text);
-                string Nombre = txtnombre.Text;
-                string Apellido = txtapellido.Text;
-                int Edad = Convert.ToInt32(txtedad.Text);
-                int Telefono = Convert.ToInt32(txttelefono.Text);
-                string Domicilio = txtdomicilio.Text;
-                string fecha_activo = dateTimePicker1.Text;
-                string fecha_cad = dateTimePicker2.Text;
-
-                MessageBox.Show(C.inser(ID_Cliente,Nombre,Apellido,Edad,Telefono,Domicilio,fecha_activo,fecha_cad));
-                C.cargarPersonas(dataGridView1);
-
+                MessageBox.Show("Datos agregados");
             }
             else
             {
-                MessageBox.Show("Imposible de registrarse, el registro ya existe");
+                MessageBox.Show("Error al agregar");
+                mostrarDatos();
             }
+
+
+           
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -63,18 +65,16 @@ namespace TotalGymWinFormApp
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            int ID_Cliente = Convert.ToInt32(txtIdcliente.Text);
-            string Nombre = txtnombre.Text;
-            string Apellido= txtapellido.Text;
-            int Edad = Convert.ToInt32(txtedad.Text);
-            int Telefono = Convert.ToInt32(txttelefono.Text);
-            string Domicilio = txtdomicilio.Text;
-            string fecha_activo = dateTimePicker1.Text;
-            string fecha_cad = dateTimePicker2.Text;
-
-            MessageBox.Show(C.inser(ID_Cliente, Nombre, Apellido, Edad, Telefono, Domicilio, fecha_activo, fecha_cad));
-            C.cargarPersonas(dataGridView1);
-
+            string actualizar = "ID_Cliente=" + txtIdcliente.Text + ",Nombre='" + txtnombre.Text + "',Apellido='" + txtapellido.Text + "',Edad=" + txtedad.Text + ",Telefono=" + txttelefono.Text + ",Domicilio='" + txtdomicilio.Text + "',fecha_activo='" + txtfecha_activo.Text + "',fecha_cad='" + txtfecha_cad.Text + "'";
+            if (C.modificar("Clientes", actualizar, "ID_Cliente=" + txtIdcliente.Text))
+            {
+                MessageBox.Show("Datos Actualizados");
+                mostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Error al Actualizar");
+            }
         }
 
         private void gbCliente_Enter(object sender, EventArgs e)
@@ -84,8 +84,75 @@ namespace TotalGymWinFormApp
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (C.eliminar("Clientes", "ID_Cliente=" + txtIdcliente.Text))
+            {
+                MessageBox.Show("Se elimino");
+                txtIdcliente.Text = "";
+                txtnombre.Text = "";
+                txtapellido.Text="";
+                txtedad.Text = "";
+                txttelefono.Text = "";
+                txtdomicilio.Text = "";
+                txtfecha_activo.Text = "";
+                txtfecha_cad.Text = "";
+                mostrarDatos();
+
+            }
+            else
+            {
+                MessageBox.Show("No se pudo eliminar");
+            }
+            
+        }
+
+        private void rbregistrar_CheckedChanged(object sender, EventArgs e)
+        {
+          
+
+
+
+
+        }
+
+        private void rbEliminar_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void rbModificar_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtIdcliente_TextChanged(object sender, EventArgs e)
+        {
+           
             
 
+
+            }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataGridViewRow grid = dataGridView1.Rows[e.RowIndex];
+
+            txtIdcliente.Text = grid.Cells[0].Value.ToString();
+            txtnombre.Text = grid.Cells[1].Value.ToString();
+            txtapellido.Text = grid.Cells[2].Value.ToString();
+            txtedad.Text = grid.Cells[3].Value.ToString();
+            txttelefono.Text = grid.Cells[4].Value.ToString();
+            txtdomicilio.Text = grid.Cells[5].Value.ToString();
+            txtfecha_activo.Text = grid.Cells[6].Value.ToString();
+            txtfecha_cad.Text = grid.Cells[7].Value.ToString();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            frmMenuUsuario a = new  frmMenuUsuario();
+            a.Show();
+
+            this.Close();
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
@@ -94,4 +161,5 @@ namespace TotalGymWinFormApp
         }
     }
     }
+
 

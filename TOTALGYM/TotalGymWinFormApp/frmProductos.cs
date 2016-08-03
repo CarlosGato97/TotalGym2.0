@@ -28,37 +28,37 @@ namespace TotalGymWinFormApp
 
         }
 
-        private void frmProductos_Load(object sender, EventArgs e)
+       
+        public void mostrarDatos()
         {
-
+            P.consulta("select*from PRODUCTOS", "PRODUCTOS");
+            dataGridView1.DataSource = P.ds.Tables["PRODUCTOS"];
         }
 
         private void frmProductos_Load_1(object sender, EventArgs e)
         {
+            P.conectar();
+            mostrarDatos();
 
-            PRODUCTOS p = new PRODUCTOS();
-            p.cargarPersonas(dataGridView1);
+
         }
 
        
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            if (P.personasregristradas(Convert.ToInt32(txtcodigopro.Text)) == 0)
+            string agregar = "insert into PRODUCTOS values(" + txtcodigopro.Text + ",'" + txtnombrepro.Text + "','" + txtdescripcion.Text + "'," + txtprecio.Text + "," + txtcantidad.Text + ",'"+txtsi_no.Text+"')";
+            if (P.agregar(agregar))
             {
-                int COD_PRO = Convert.ToInt32(txtcodigopro.Text);
-                string NOMBRE_PRO = txtnombrepro.Text;
-                string DESCRIPCION = txtdescripcion.Text;
-                int PRECIO = Convert.ToInt32(txtprecio.Text);
-                int CANTIDAD = Convert.ToInt32(txtcantidad.Text);
-                string EXISTENCIA = cksi.Text;
+                MessageBox.Show("Datos agregados");
+                mostrarDatos();
 
-                MessageBox.Show(P.insertar(COD_PRO, NOMBRE_PRO, DESCRIPCION, PRECIO, CANTIDAD, EXISTENCIA));
-                P.cargarPersonas(dataGridView1);
             }
             else
             {
-                MessageBox.Show("Imposible de registrarse, el registro ya existe");
+                MessageBox.Show("Error al agregar");
+
             }
+
 
 
         }
@@ -80,9 +80,66 @@ namespace TotalGymWinFormApp
             this.Close();
         }
 
+     
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            string actualizar = "COD_PRO=" + txtcodigopro.Text + ",NOMBRE_PRO='" + txtnombrepro.Text + "',DESCRIPCION='" + txtdescripcion.Text + "',PRECIO=" + txtprecio.Text + ",CANTIDAD=" + txtcantidad.Text + ",EXISTENCIA='"+txtsi_no.Text+"'";
+            if (P.modificar("PRODUCTOS", actualizar, "COD_PRO=" + txtcodigopro.Text))
+            {
+                MessageBox.Show("Datos Actualizados");
+                mostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Error al Actualizar");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (P.eliminar("PRODUCTOS", "COD_PRO=" + txtcodigopro.Text))
+            {
+                MessageBox.Show("Se elimino");
+                txtcodigopro.Text = "";
+                txtnombrepro.Text = "";
+                txtdescripcion.Text = "";
+                txtprecio.Text = "";
+                txtcantidad.Text = "";
+                txtsi_no.Text = "";
+              
+                mostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo eliminar");
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow grid = dataGridView1.Rows[e.RowIndex];
+
+            
+            txtcodigopro.Text = grid.Cells[0].Value.ToString();
+            txtnombrepro.Text = grid.Cells[1].Value.ToString();
+            txtdescripcion.Text = grid.Cells[2].Value.ToString();
+            txtprecio.Text = grid.Cells[3].Value.ToString();
+            txtcantidad.Text = grid.Cells[4].Value.ToString();
+            txtsi_no.Text = grid.Cells[5].Value.ToString();
+           
+
+        }
+
+        private void gbproductos_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            frmMenuAdmin a = new frmMenuAdmin();
+            frmMenuUsuario a = new frmMenuUsuario();
             a.Show();
 
             this.Close();

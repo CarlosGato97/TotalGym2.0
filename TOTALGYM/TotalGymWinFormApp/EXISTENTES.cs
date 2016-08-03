@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data.Sql;
 
 namespace TotalGymWinFormApp
 {
-    class PRODUCTOS
+    class EXISTENTES
     {
         SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=TOTALGYM;Integrated Security=True");
 
@@ -36,46 +36,6 @@ namespace TotalGymWinFormApp
                 cn.Close();
             }
         }
-        public void consulta(string sql, string tabla)
-        {
-            ds.Tables.Clear();
-            da = new SqlDataAdapter(sql, cn);
-            cmb = new SqlCommandBuilder(da);
-            da.Fill(ds, tabla);
-        }
-        public bool agregar(string sql)
-        {
-            cn.Open();
-            comando = new SqlCommand(sql, cn);
-            int i = comando.ExecuteNonQuery();
-            cn.Close();
-            if (i > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-
-            }
-        }
-        public bool eliminar(string tabla, string condicion)
-        {
-            cn.Open();
-            string eliminar = "delete from " + tabla + " where " + condicion;
-            comando = new SqlCommand(eliminar, cn);
-            int i = comando.ExecuteNonQuery();
-            cn.Close();
-
-            if (i > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
         public bool modificar(string tabla, string campos, string condicion)
         {
             cn.Open();
@@ -92,10 +52,14 @@ namespace TotalGymWinFormApp
                 return false;
             }
         }
-
-
-
+        public void consulta(string sql, string tabla)
+        {
+            ds.Tables.Clear();
+            da = new SqlDataAdapter(sql, cn);
+            cmb = new SqlCommandBuilder(da);
+            da.Fill(ds, tabla);
 
 
         }
+    }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TotalGymWinFormApp
 {
-    partial class frmMenuAdmin
+    partial class frmMenuUsuario
     {
         /// <summary>
         /// Required designer variable.
