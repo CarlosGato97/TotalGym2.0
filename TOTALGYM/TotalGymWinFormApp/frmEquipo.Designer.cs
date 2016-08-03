@@ -170,6 +170,7 @@
             this.dgv.Name = "dgv";
             this.dgv.Size = new System.Drawing.Size(400, 237);
             this.dgv.TabIndex = 1;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
             // frmEquipo
             // 

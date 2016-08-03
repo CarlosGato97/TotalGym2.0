@@ -105,5 +105,10 @@ namespace TotalGymWinFormApp
             dgv.DataSource = con.ds.Tables["PERSONAL"];
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
