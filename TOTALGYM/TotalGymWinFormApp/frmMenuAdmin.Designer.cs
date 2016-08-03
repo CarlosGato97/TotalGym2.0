@@ -36,6 +36,7 @@
             this.btnProducto = new System.Windows.Forms.Button();
             this.lblInformacion = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEtiquetaUsuario
@@ -98,7 +99,7 @@
             // lblInformacion
             // 
             this.lblInformacion.AutoSize = true;
-            this.lblInformacion.Location = new System.Drawing.Point(3, 189);
+            this.lblInformacion.Location = new System.Drawing.Point(1, 210);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(110, 13);
             this.lblInformacion.TabIndex = 6;
@@ -106,7 +107,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(124, 151);
+            this.btnSalir.Location = new System.Drawing.Point(124, 140);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 7;
@@ -114,12 +115,23 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // frmMenuAdmin
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(124, 182);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresar.TabIndex = 8;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // frmMenuUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 202);
+            this.ClientSize = new System.Drawing.Size(336, 232);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.btnProducto);
@@ -131,7 +143,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmMenuAdmin";
+            this.Name = "frmMenuUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Admin";
             this.ResumeLayout(false);
@@ -149,5 +161,6 @@
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Label lblInformacion;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

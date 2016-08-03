@@ -28,7 +28,7 @@ namespace TotalGymWinFormApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)

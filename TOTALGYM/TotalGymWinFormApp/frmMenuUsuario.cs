@@ -37,5 +37,14 @@ namespace TotalGymWinFormApp
             this.Close();
             
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            frmLogin a = new frmLogin();
+            a.Show();
+
+            this.Close();
+
+        }
     }
 }
