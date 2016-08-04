@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TotalGymWinFormApp
 {
-    public partial class frmMenuAdmin : Form
+    public partial class frmMenuUsuario : Form
     {
-        public frmMenuAdmin()
+        public frmMenuUsuario()
         {
             InitializeComponent();
         }
@@ -43,6 +43,19 @@ namespace TotalGymWinFormApp
             frmProductos productos = new frmProductos();
             productos.Show();
             this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            frmLogin a = new frmLogin();
+            a.Show();
+
+            this.Close();
         }
     }
 }

@@ -33,12 +33,14 @@
             this.btnEquipo = new System.Windows.Forms.Button();
             this.lblNombreAdmin = new System.Windows.Forms.Label();
             this.lblEtiquetaUsuario = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblInformacion
             // 
             this.lblInformacion.AutoSize = true;
-            this.lblInformacion.Location = new System.Drawing.Point(8, 155);
+            this.lblInformacion.Location = new System.Drawing.Point(0, 241);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(110, 13);
             this.lblInformacion.TabIndex = 13;
@@ -46,21 +48,23 @@
             // 
             // btnRutina
             // 
-            this.btnRutina.Location = new System.Drawing.Point(71, 92);
+            this.btnRutina.Location = new System.Drawing.Point(90, 96);
             this.btnRutina.Name = "btnRutina";
-            this.btnRutina.Size = new System.Drawing.Size(117, 28);
+            this.btnRutina.Size = new System.Drawing.Size(124, 28);
             this.btnRutina.TabIndex = 10;
             this.btnRutina.Text = "Rutinas";
             this.btnRutina.UseVisualStyleBackColor = true;
+            this.btnRutina.Click += new System.EventHandler(this.btnRutina_Click);
             // 
             // btnEquipo
             // 
-            this.btnEquipo.Location = new System.Drawing.Point(71, 40);
+            this.btnEquipo.Location = new System.Drawing.Point(90, 44);
             this.btnEquipo.Name = "btnEquipo";
-            this.btnEquipo.Size = new System.Drawing.Size(117, 28);
+            this.btnEquipo.Size = new System.Drawing.Size(124, 28);
             this.btnEquipo.TabIndex = 9;
             this.btnEquipo.Text = "Equipo";
             this.btnEquipo.UseVisualStyleBackColor = true;
+            this.btnEquipo.Click += new System.EventHandler(this.btnEquipo_Click);
             // 
             // lblNombreAdmin
             // 
@@ -79,12 +83,34 @@
             this.lblEtiquetaUsuario.TabIndex = 7;
             this.lblEtiquetaUsuario.Text = "Usuario: ";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(108, 177);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(80, 28);
+            this.btnSalir.TabIndex = 14;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(108, 143);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(80, 28);
+            this.btnRegresar.TabIndex = 15;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 175);
+            this.ClientSize = new System.Drawing.Size(301, 263);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.btnRutina);
             this.Controls.Add(this.btnEquipo);
@@ -108,5 +134,7 @@
         private System.Windows.Forms.Button btnEquipo;
         private System.Windows.Forms.Label lblNombreAdmin;
         private System.Windows.Forms.Label lblEtiquetaUsuario;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

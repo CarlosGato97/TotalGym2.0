@@ -45,21 +45,16 @@ namespace TotalGymWinFormApp
             SqlCommand comando = new SqlCommand(cadena,conexion);
             SqlDataReader read = comando.ExecuteReader();
 
-            if (read.Read())
-            {
-
-                pass2 = read["Contraseña"].ToString();
-                tipo = read["tipo"].ToString();
-                if (pass2 == txtContraseña.Text)
-                {
-                    if (tipo == "administrador")
-                    {
+            if (read.Read()) {
+               pass2 = read["Contraseña"].ToString();
+               tipo= read["tipo"].ToString();
+                if (pass2==txtContraseña.Text){
+                    if(tipo=="administrador"){
                         frmMenuAdmin add = new frmMenuAdmin();
                         add.Show();
                         this.Hide();
                     }
-                    if (tipo == "Usuario")
-                    {
+                    if (tipo=="Usuario") {
                         frmMenuAdmin add = new frmMenuAdmin();
                         add.Show();
                         this.Hide();
@@ -79,7 +74,10 @@ namespace TotalGymWinFormApp
 
 
         }
-      
-            
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
+    }
     }

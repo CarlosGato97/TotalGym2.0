@@ -28,166 +28,205 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gppersonal = new System.Windows.Forms.GroupBox();
-            this.btneliminar = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnagregar = new System.Windows.Forms.Button();
-            this.lblapellido = new System.Windows.Forms.Label();
-            this.lblpuesto = new System.Windows.Forms.Label();
-            this.lblnombre = new System.Windows.Forms.Label();
-            this.lblcodigo = new System.Windows.Forms.Label();
-            this.gppersonal.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtArea = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // gppersonal
+            // label1
             // 
-            this.gppersonal.BackColor = System.Drawing.Color.Cyan;
-            this.gppersonal.BackgroundImage = global::TotalGymWinFormApp.Properties.Resources.ventanapersonal6;
-            this.gppersonal.Controls.Add(this.btneliminar);
-            this.gppersonal.Controls.Add(this.textBox4);
-            this.gppersonal.Controls.Add(this.textBox3);
-            this.gppersonal.Controls.Add(this.textBox2);
-            this.gppersonal.Controls.Add(this.textBox1);
-            this.gppersonal.Controls.Add(this.btnagregar);
-            this.gppersonal.Controls.Add(this.lblapellido);
-            this.gppersonal.Controls.Add(this.lblpuesto);
-            this.gppersonal.Controls.Add(this.lblnombre);
-            this.gppersonal.Controls.Add(this.lblcodigo);
-            this.gppersonal.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gppersonal.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.gppersonal.Location = new System.Drawing.Point(12, 31);
-            this.gppersonal.Name = "gppersonal";
-            this.gppersonal.Size = new System.Drawing.Size(506, 274);
-            this.gppersonal.TabIndex = 0;
-            this.gppersonal.TabStop = false;
-            this.gppersonal.Text = "Personal";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre";
             // 
-            // btneliminar
+            // groupBox1
             // 
-            this.btneliminar.BackColor = System.Drawing.Color.DeepPink;
-            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
-            this.btneliminar.ForeColor = System.Drawing.Color.White;
-            this.btneliminar.Location = new System.Drawing.Point(364, 224);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(96, 37);
-            this.btneliminar.TabIndex = 9;
-            this.btneliminar.Text = "Eliminar";
-            this.btneliminar.UseVisualStyleBackColor = false;
+            this.groupBox1.Controls.Add(this.txtCodigo);
+            this.groupBox1.Controls.Add(this.btnEliminar);
+            this.groupBox1.Controls.Add(this.btnModificar);
+            this.groupBox1.Controls.Add(this.btnAgregar);
+            this.groupBox1.Controls.Add(this.txtArea);
+            this.groupBox1.Controls.Add(this.txtApellido);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(9, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(379, 214);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Personal";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox4
+            // txtCodigo
             // 
-            this.textBox4.Location = new System.Drawing.Point(84, 180);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(182, 21);
-            this.textBox4.TabIndex = 8;
+            this.txtCodigo.Location = new System.Drawing.Point(89, 175);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 7;
             // 
-            // textBox3
+            // btnEliminar
             // 
-            this.textBox3.Location = new System.Drawing.Point(84, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(252, 21);
-            this.textBox3.TabIndex = 7;
+            this.btnEliminar.Location = new System.Drawing.Point(285, 122);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // textBox2
+            // btnModificar
             // 
-            this.textBox2.Location = new System.Drawing.Point(84, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 21);
-            this.textBox2.TabIndex = 6;
+            this.btnModificar.Location = new System.Drawing.Point(285, 73);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 5;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // textBox1
+            // btnAgregar
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 21);
-            this.textBox1.TabIndex = 5;
+            this.btnAgregar.Location = new System.Drawing.Point(285, 19);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 6;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnagregar
+            // txtArea
             // 
-            this.btnagregar.BackColor = System.Drawing.Color.DeepPink;
-            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
-            this.btnagregar.ForeColor = System.Drawing.Color.White;
-            this.btnagregar.Location = new System.Drawing.Point(84, 224);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(89, 37);
-            this.btnagregar.TabIndex = 4;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.UseVisualStyleBackColor = false;
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
+            this.txtArea.Location = new System.Drawing.Point(89, 124);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(100, 20);
+            this.txtArea.TabIndex = 6;
             // 
-            // lblapellido
+            // txtApellido
             // 
-            this.lblapellido.AutoSize = true;
-            this.lblapellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
-            this.lblapellido.Location = new System.Drawing.Point(21, 140);
-            this.lblapellido.Name = "lblapellido";
-            this.lblapellido.Size = new System.Drawing.Size(60, 16);
-            this.lblapellido.TabIndex = 3;
-            this.lblapellido.Text = "Apellido";
+            this.txtApellido.Location = new System.Drawing.Point(89, 76);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtApellido.TabIndex = 5;
             // 
-            // lblpuesto
+            // txtNombre
             // 
-            this.lblpuesto.AutoSize = true;
-            this.lblpuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
-            this.lblpuesto.Location = new System.Drawing.Point(21, 180);
-            this.lblpuesto.Name = "lblpuesto";
-            this.lblpuesto.Size = new System.Drawing.Size(50, 16);
-            this.lblpuesto.TabIndex = 2;
-            this.lblpuesto.Text = "Puesto";
+            this.txtNombre.Location = new System.Drawing.Point(89, 30);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 4;
             // 
-            // lblnombre
+            // label4
             // 
-            this.lblnombre.AutoSize = true;
-            this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
-            this.lblnombre.Location = new System.Drawing.Point(21, 102);
-            this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(57, 16);
-            this.lblnombre.TabIndex = 1;
-            this.lblnombre.Text = "Nombre";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 132);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Area";
             // 
-            // lblcodigo
+            // label3
             // 
-            this.lblcodigo.AutoSize = true;
-            this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(77)));
-            this.lblcodigo.Location = new System.Drawing.Point(21, 65);
-            this.lblcodigo.Name = "lblcodigo";
-            this.lblcodigo.Size = new System.Drawing.Size(52, 16);
-            this.lblcodigo.TabIndex = 0;
-            this.lblcodigo.Text = "Codigo";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 183);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Codigo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Apellido";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(497, 195);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(601, 195);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresar.TabIndex = 7;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // dgv
+            // 
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(394, 12);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(444, 161);
+            this.dgv.TabIndex = 3;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // frmPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(530, 317);
+            this.ClientSize = new System.Drawing.Size(842, 230);
             this.ControlBox = false;
-            this.Controls.Add(this.gppersonal);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmPersonal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.gppersonal.ResumeLayout(false);
-            this.gppersonal.PerformLayout();
+            this.Text = "frmPersonal";
+            this.Load += new System.EventHandler(this.frmPersonal_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gppersonal;
-        private System.Windows.Forms.Button btneliminar;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.Label lblapellido;
-        private System.Windows.Forms.Label lblpuesto;
-        private System.Windows.Forms.Label lblnombre;
-        private System.Windows.Forms.Label lblcodigo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.TextBox txtArea;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.DataGridView dgv;
     }
 }

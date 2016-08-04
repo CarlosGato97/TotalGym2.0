@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.gbproductos = new System.Windows.Forms.GroupBox();
+            this.txtsi_no = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.ckno = new System.Windows.Forms.CheckBox();
-            this.cksi = new System.Windows.Forms.CheckBox();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.txtprecio = new System.Windows.Forms.TextBox();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
@@ -45,18 +46,19 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblcodigo = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnver = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.gbproductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbproductos
             // 
-            this.gbproductos.Controls.Add(this.btnver);
+            this.gbproductos.Controls.Add(this.btnRegresar);
+            this.gbproductos.Controls.Add(this.txtsi_no);
+            this.gbproductos.Controls.Add(this.btnEliminar);
+            this.gbproductos.Controls.Add(this.btnModificar);
             this.gbproductos.Controls.Add(this.btnSalir);
             this.gbproductos.Controls.Add(this.btnagregar);
-            this.gbproductos.Controls.Add(this.ckno);
-            this.gbproductos.Controls.Add(this.cksi);
             this.gbproductos.Controls.Add(this.txtcantidad);
             this.gbproductos.Controls.Add(this.txtprecio);
             this.gbproductos.Controls.Add(this.txtdescripcion);
@@ -70,14 +72,42 @@
             this.gbproductos.Controls.Add(this.lblcodigo);
             this.gbproductos.Location = new System.Drawing.Point(12, 12);
             this.gbproductos.Name = "gbproductos";
-            this.gbproductos.Size = new System.Drawing.Size(652, 247);
+            this.gbproductos.Size = new System.Drawing.Size(652, 298);
             this.gbproductos.TabIndex = 0;
             this.gbproductos.TabStop = false;
             this.gbproductos.Text = "Productos";
+            this.gbproductos.Enter += new System.EventHandler(this.gbproductos_Enter);
+            // 
+            // txtsi_no
+            // 
+            this.txtsi_no.Location = new System.Drawing.Point(118, 214);
+            this.txtsi_no.Name = "txtsi_no";
+            this.txtsi_no.Size = new System.Drawing.Size(100, 20);
+            this.txtsi_no.TabIndex = 18;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(532, 140);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(84, 35);
+            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(532, 89);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(84, 35);
+            this.btnModificar.TabIndex = 16;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(532, 98);
+            this.btnSalir.Location = new System.Drawing.Point(532, 193);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(84, 37);
             this.btnSalir.TabIndex = 15;
@@ -87,33 +117,13 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(532, 170);
+            this.btnagregar.Location = new System.Drawing.Point(532, 34);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(84, 36);
             this.btnagregar.TabIndex = 14;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
-            // 
-            // ckno
-            // 
-            this.ckno.AutoSize = true;
-            this.ckno.Location = new System.Drawing.Point(223, 217);
-            this.ckno.Name = "ckno";
-            this.ckno.Size = new System.Drawing.Size(40, 17);
-            this.ckno.TabIndex = 12;
-            this.ckno.Text = "No";
-            this.ckno.UseVisualStyleBackColor = true;
-            // 
-            // cksi
-            // 
-            this.cksi.AutoSize = true;
-            this.cksi.Location = new System.Drawing.Point(118, 217);
-            this.cksi.Name = "cksi";
-            this.cksi.Size = new System.Drawing.Size(35, 17);
-            this.cksi.TabIndex = 11;
-            this.cksi.Text = "Si";
-            this.cksi.UseVisualStyleBackColor = true;
             // 
             // txtcantidad
             // 
@@ -209,25 +219,27 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 265);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 316);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(657, 201);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // btnver
+            // btnRegresar
             // 
-            this.btnver.Location = new System.Drawing.Point(532, 34);
-            this.btnver.Name = "btnver";
-            this.btnver.Size = new System.Drawing.Size(84, 39);
-            this.btnver.TabIndex = 16;
-            this.btnver.Text = "Ver";
-            this.btnver.UseVisualStyleBackColor = true;
+            this.btnRegresar.Location = new System.Drawing.Point(532, 255);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(84, 37);
+            this.btnRegresar.TabIndex = 19;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 478);
+            this.ClientSize = new System.Drawing.Size(676, 520);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbproductos);
@@ -248,8 +260,6 @@
         private System.Windows.Forms.GroupBox gbproductos;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lblcodigo;
-        private System.Windows.Forms.CheckBox ckno;
-        private System.Windows.Forms.CheckBox cksi;
         private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.TextBox txtdescripcion;
@@ -262,6 +272,9 @@
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnver;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.TextBox txtsi_no;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }
