@@ -50,12 +50,12 @@ namespace TotalGymWinFormApp
                tipo= read["tipo"].ToString();
                 if (pass2==txtContraseña.Text){
                     if(tipo=="administrador"){
-                        frmMenuAdmin add = new frmMenuAdmin();
+                        frmMenuUsuario add = new frmMenuUsuario();
                         add.Show();
                         this.Hide();
                     }
                     if (tipo=="Usuario") {
-                        frmMenuAdmin add = new frmMenuAdmin();
+                        frmMenuPrincipal add = new frmMenuPrincipal();
                         add.Show();
                         this.Hide();
                     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.lblInformacion = new System.Windows.Forms.Label();
             this.btnRutina = new System.Windows.Forms.Button();
             this.btnEquipo = new System.Windows.Forms.Button();
@@ -40,7 +41,9 @@
             // lblInformacion
             // 
             this.lblInformacion.AutoSize = true;
-            this.lblInformacion.Location = new System.Drawing.Point(0, 241);
+            this.lblInformacion.BackColor = System.Drawing.Color.Transparent;
+            this.lblInformacion.ForeColor = System.Drawing.Color.White;
+            this.lblInformacion.Location = new System.Drawing.Point(12, 228);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(110, 13);
             this.lblInformacion.TabIndex = 13;
@@ -48,22 +51,26 @@
             // 
             // btnRutina
             // 
-            this.btnRutina.Location = new System.Drawing.Point(90, 96);
+            this.btnRutina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRutina.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRutina.Location = new System.Drawing.Point(175, 115);
             this.btnRutina.Name = "btnRutina";
             this.btnRutina.Size = new System.Drawing.Size(124, 28);
             this.btnRutina.TabIndex = 10;
             this.btnRutina.Text = "Rutinas";
-            this.btnRutina.UseVisualStyleBackColor = true;
+            this.btnRutina.UseVisualStyleBackColor = false;
             this.btnRutina.Click += new System.EventHandler(this.btnRutina_Click);
             // 
             // btnEquipo
             // 
-            this.btnEquipo.Location = new System.Drawing.Point(90, 44);
+            this.btnEquipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEquipo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEquipo.Location = new System.Drawing.Point(175, 71);
             this.btnEquipo.Name = "btnEquipo";
             this.btnEquipo.Size = new System.Drawing.Size(124, 28);
             this.btnEquipo.TabIndex = 9;
             this.btnEquipo.Text = "Equipo";
-            this.btnEquipo.UseVisualStyleBackColor = true;
+            this.btnEquipo.UseVisualStyleBackColor = false;
             this.btnEquipo.Click += new System.EventHandler(this.btnEquipo_Click);
             // 
             // lblNombreAdmin
@@ -77,37 +84,46 @@
             // lblEtiquetaUsuario
             // 
             this.lblEtiquetaUsuario.AutoSize = true;
-            this.lblEtiquetaUsuario.Location = new System.Drawing.Point(133, 15);
+            this.lblEtiquetaUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblEtiquetaUsuario.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEtiquetaUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblEtiquetaUsuario.Location = new System.Drawing.Point(187, 25);
             this.lblEtiquetaUsuario.Name = "lblEtiquetaUsuario";
-            this.lblEtiquetaUsuario.Size = new System.Drawing.Size(49, 13);
+            this.lblEtiquetaUsuario.Size = new System.Drawing.Size(105, 24);
             this.lblEtiquetaUsuario.TabIndex = 7;
             this.lblEtiquetaUsuario.Text = "Usuario: ";
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(108, 177);
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSalir.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(200, 204);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(80, 28);
             this.btnSalir.TabIndex = 14;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(108, 143);
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegresar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(200, 170);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(80, 28);
             this.btnRegresar.TabIndex = 15;
             this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 263);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(486, 255);
             this.ControlBox = false;
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnSalir);
@@ -116,7 +132,8 @@
             this.Controls.Add(this.btnEquipo);
             this.Controls.Add(this.lblNombreAdmin);
             this.Controls.Add(this.lblEtiquetaUsuario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMenuPrincipal";
