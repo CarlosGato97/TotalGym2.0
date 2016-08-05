@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.gbCliente = new System.Windows.Forms.GroupBox();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.txtfecha_cad = new System.Windows.Forms.TextBox();
+            this.txtfecha_activo = new System.Windows.Forms.TextBox();
             this.rbModificar = new System.Windows.Forms.RadioButton();
             this.rbEliminar = new System.Windows.Forms.RadioButton();
             this.rbregistrar = new System.Windows.Forms.RadioButton();
@@ -52,16 +56,13 @@
             this.lbNombre = new System.Windows.Forms.Label();
             this.llbID = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtfecha_activo = new System.Windows.Forms.TextBox();
-            this.txtfecha_cad = new System.Windows.Forms.TextBox();
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.gbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbCliente
             // 
-            this.gbCliente.BackColor = System.Drawing.SystemColors.Control;
+            this.gbCliente.BackColor = System.Drawing.Color.Transparent;
             this.gbCliente.Controls.Add(this.btnRegresar);
             this.gbCliente.Controls.Add(this.txtfecha_cad);
             this.gbCliente.Controls.Add(this.txtfecha_activo);
@@ -87,6 +88,7 @@
             this.gbCliente.Controls.Add(this.label3);
             this.gbCliente.Controls.Add(this.lbNombre);
             this.gbCliente.Controls.Add(this.llbID);
+            this.gbCliente.ForeColor = System.Drawing.Color.White;
             this.gbCliente.Location = new System.Drawing.Point(12, 23);
             this.gbCliente.Name = "gbCliente";
             this.gbCliente.Size = new System.Drawing.Size(392, 382);
@@ -95,12 +97,41 @@
             this.gbCliente.Text = "Cliente";
             this.gbCliente.Enter += new System.EventHandler(this.gbCliente_Enter);
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRegresar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.ForeColor = System.Drawing.Color.Black;
+            this.btnRegresar.Location = new System.Drawing.Point(302, 248);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(84, 35);
+            this.btnRegresar.TabIndex = 27;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // txtfecha_cad
+            // 
+            this.txtfecha_cad.Location = new System.Drawing.Point(108, 327);
+            this.txtfecha_cad.Name = "txtfecha_cad";
+            this.txtfecha_cad.Size = new System.Drawing.Size(151, 20);
+            this.txtfecha_cad.TabIndex = 26;
+            // 
+            // txtfecha_activo
+            // 
+            this.txtfecha_activo.Location = new System.Drawing.Point(108, 297);
+            this.txtfecha_activo.Name = "txtfecha_activo";
+            this.txtfecha_activo.Size = new System.Drawing.Size(151, 20);
+            this.txtfecha_activo.TabIndex = 25;
+            // 
             // rbModificar
             // 
             this.rbModificar.AutoSize = true;
+            this.rbModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbModificar.ForeColor = System.Drawing.Color.White;
             this.rbModificar.Location = new System.Drawing.Point(205, 32);
             this.rbModificar.Name = "rbModificar";
-            this.rbModificar.Size = new System.Drawing.Size(68, 17);
+            this.rbModificar.Size = new System.Drawing.Size(90, 20);
             this.rbModificar.TabIndex = 24;
             this.rbModificar.TabStop = true;
             this.rbModificar.Text = "Modificar";
@@ -110,9 +141,11 @@
             // rbEliminar
             // 
             this.rbEliminar.AutoSize = true;
+            this.rbEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEliminar.ForeColor = System.Drawing.Color.White;
             this.rbEliminar.Location = new System.Drawing.Point(114, 32);
             this.rbEliminar.Name = "rbEliminar";
-            this.rbEliminar.Size = new System.Drawing.Size(61, 17);
+            this.rbEliminar.Size = new System.Drawing.Size(82, 20);
             this.rbEliminar.TabIndex = 23;
             this.rbEliminar.TabStop = true;
             this.rbEliminar.Text = "Eliminar";
@@ -122,9 +155,11 @@
             // rbregistrar
             // 
             this.rbregistrar.AutoSize = true;
+            this.rbregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbregistrar.ForeColor = System.Drawing.Color.White;
             this.rbregistrar.Location = new System.Drawing.Point(13, 32);
             this.rbregistrar.Name = "rbregistrar";
-            this.rbregistrar.Size = new System.Drawing.Size(67, 17);
+            this.rbregistrar.Size = new System.Drawing.Size(90, 20);
             this.rbregistrar.TabIndex = 22;
             this.rbregistrar.TabStop = true;
             this.rbregistrar.Text = "Registrar";
@@ -133,61 +168,77 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(302, 61);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(84, 30);
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSalir.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Location = new System.Drawing.Point(302, 204);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(84, 30);
             this.btnSalir.TabIndex = 20;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAgregar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Location = new System.Drawing.Point(302, 156);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(84, 30);
             this.btnAgregar.TabIndex = 19;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnModificar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.Location = new System.Drawing.Point(302, 110);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(84, 30);
             this.btnModificar.TabIndex = 18;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(1, 327);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(78, 19);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Fecha _Cad";
+            this.label2.Text = "Fecha Cad";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(1, 297);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(96, 19);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Fecha_Activo";
+            this.label1.Text = "Fecha Activo";
             // 
             // txtedad
             // 
@@ -199,9 +250,11 @@
             // lbEdad
             // 
             this.lbEdad.AutoSize = true;
+            this.lbEdad.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEdad.ForeColor = System.Drawing.Color.White;
             this.lbEdad.Location = new System.Drawing.Point(10, 255);
             this.lbEdad.Name = "lbEdad";
-            this.lbEdad.Size = new System.Drawing.Size(32, 13);
+            this.lbEdad.Size = new System.Drawing.Size(43, 19);
             this.lbEdad.TabIndex = 12;
             this.lbEdad.Text = "Edad";
             // 
@@ -215,9 +268,11 @@
             // lbTelefono
             // 
             this.lbTelefono.AutoSize = true;
+            this.lbTelefono.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lbTelefono.Location = new System.Drawing.Point(1, 221);
             this.lbTelefono.Name = "lbTelefono";
-            this.lbTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lbTelefono.Size = new System.Drawing.Size(69, 19);
             this.lbTelefono.TabIndex = 10;
             this.lbTelefono.Text = "Telefono";
             // 
@@ -231,9 +286,11 @@
             // lbDomicilio
             // 
             this.lbDomicilio.AutoSize = true;
+            this.lbDomicilio.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDomicilio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lbDomicilio.Location = new System.Drawing.Point(6, 188);
             this.lbDomicilio.Name = "lbDomicilio";
-            this.lbDomicilio.Size = new System.Drawing.Size(49, 13);
+            this.lbDomicilio.Size = new System.Drawing.Size(73, 19);
             this.lbDomicilio.TabIndex = 8;
             this.lbDomicilio.Text = "Domicilio";
             // 
@@ -262,9 +319,11 @@
             // lbApellido
             // 
             this.lbApellido.AutoSize = true;
+            this.lbApellido.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lbApellido.Location = new System.Drawing.Point(6, 156);
             this.lbApellido.Name = "lbApellido";
-            this.lbApellido.Size = new System.Drawing.Size(44, 13);
+            this.lbApellido.Size = new System.Drawing.Size(66, 19);
             this.lbApellido.TabIndex = 3;
             this.lbApellido.Text = "Apellido";
             // 
@@ -279,23 +338,28 @@
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
+            this.lbNombre.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lbNombre.Location = new System.Drawing.Point(6, 123);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(44, 13);
+            this.lbNombre.Size = new System.Drawing.Size(65, 19);
             this.lbNombre.TabIndex = 1;
             this.lbNombre.Text = "Nombre";
             // 
             // llbID
             // 
             this.llbID.AutoSize = true;
+            this.llbID.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.llbID.Location = new System.Drawing.Point(3, 90);
             this.llbID.Name = "llbID";
-            this.llbID.Size = new System.Drawing.Size(52, 13);
+            this.llbID.Size = new System.Drawing.Size(72, 19);
             this.llbID.TabIndex = 0;
             this.llbID.Text = "ID cliente";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(447, 33);
             this.dataGridView1.Name = "dataGridView1";
@@ -303,39 +367,19 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // txtfecha_activo
-            // 
-            this.txtfecha_activo.Location = new System.Drawing.Point(80, 297);
-            this.txtfecha_activo.Name = "txtfecha_activo";
-            this.txtfecha_activo.Size = new System.Drawing.Size(151, 20);
-            this.txtfecha_activo.TabIndex = 25;
-            // 
-            // txtfecha_cad
-            // 
-            this.txtfecha_cad.Location = new System.Drawing.Point(80, 327);
-            this.txtfecha_cad.Name = "txtfecha_cad";
-            this.txtfecha_cad.Size = new System.Drawing.Size(151, 20);
-            this.txtfecha_cad.TabIndex = 26;
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Location = new System.Drawing.Point(302, 248);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(84, 35);
-            this.btnRegresar.TabIndex = 27;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1003, 417);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbCliente);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";

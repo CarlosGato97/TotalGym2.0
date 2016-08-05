@@ -144,5 +144,15 @@ namespace TotalGymWinFormApp
 
             this.Close();
         }
+
+        private void txtprecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnombrepro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

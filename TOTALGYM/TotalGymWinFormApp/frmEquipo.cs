@@ -115,6 +115,10 @@ namespace TotalGymWinFormApp
 
         }
 
+        private void txtCod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

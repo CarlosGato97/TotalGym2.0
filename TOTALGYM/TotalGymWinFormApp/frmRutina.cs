@@ -47,7 +47,7 @@ namespace TotalGymWinFormApp
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            frmMenuUsuario a = new frmMenuUsuario();
+            frmMenuPrincipal a = new frmMenuPrincipal();
             a.Show();
             
 
