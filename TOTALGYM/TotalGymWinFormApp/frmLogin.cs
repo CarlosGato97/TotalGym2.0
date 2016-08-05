@@ -28,6 +28,7 @@ namespace TotalGymWinFormApp
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 
@@ -58,6 +59,7 @@ namespace TotalGymWinFormApp
                         add.Show();
                         this.Hide();
                     }
+                    
                     if (tipo=="cliente") {
                         frmMenuPrincipal prin = new frmMenuPrincipal();
                       prin.Show();
@@ -71,6 +73,11 @@ namespace TotalGymWinFormApp
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }
