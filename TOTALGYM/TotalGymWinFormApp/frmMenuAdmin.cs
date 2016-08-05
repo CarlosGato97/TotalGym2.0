@@ -57,5 +57,10 @@ namespace TotalGymWinFormApp
 
             this.Close();
         }
+
+        private void frmMenuUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
