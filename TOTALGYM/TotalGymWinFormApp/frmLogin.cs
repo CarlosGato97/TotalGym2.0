@@ -28,7 +28,6 @@ namespace TotalGymWinFormApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             this.Close();
         }
 
@@ -40,6 +39,7 @@ namespace TotalGymWinFormApp
             string pass = txtContraseña.Text;
             string tipo;
             string pass2;
+           
 
            string cadena=("select ID_Cliente,Contraseña, Tipo from TIPO where ID_Cliente="+user);
             SqlCommand comando = new SqlCommand(cadena,conexion);
@@ -50,22 +50,25 @@ namespace TotalGymWinFormApp
                tipo= read["tipo"].ToString();
                 if (pass2==txtContraseña.Text){
                     if(tipo=="administrador"){
-                        frmMenuUsuario add = new frmMenuUsuario();
+                        frmMenuAdmin add = new frmMenuAdmin();
                         add.Show();
                         this.Hide();
                     }
                     if (tipo=="Usuario") {
-                        frmMenuPrincipal add = new frmMenuPrincipal();
+                        frmMenuAdmin add = new frmMenuAdmin();
                         add.Show();
                         this.Hide();
                     }
-                    
-                    if (tipo=="cliente") {
+                    if (tipo == "cliente")
+                    {
                         frmMenuPrincipal prin = new frmMenuPrincipal();
-                      prin.Show();
+                        prin.Show();
                         this.Hide();
                     }
                 }
+            }
+            else {
+                MessageBox.Show("!Usuario/Contraseña incorrectos,Verifique bien los datos¡");
             }
 
 
@@ -73,11 +76,6 @@ namespace TotalGymWinFormApp
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }

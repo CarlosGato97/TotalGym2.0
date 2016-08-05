@@ -106,6 +106,7 @@
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(156, 26);
             this.txtContraseña.TabIndex = 5;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
