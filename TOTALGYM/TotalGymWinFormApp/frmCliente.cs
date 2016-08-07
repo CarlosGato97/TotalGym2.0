@@ -47,6 +47,7 @@ namespace TotalGymWinFormApp
             if (C.agregar(agregar))
             {
                 MessageBox.Show("Datos agregados");
+                mostrarDatos();
             }
             else
             {
