@@ -33,9 +33,6 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.txtfecha_cad = new System.Windows.Forms.TextBox();
             this.txtfecha_activo = new System.Windows.Forms.TextBox();
-            this.rbModificar = new System.Windows.Forms.RadioButton();
-            this.rbEliminar = new System.Windows.Forms.RadioButton();
-            this.rbregistrar = new System.Windows.Forms.RadioButton();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -66,9 +63,6 @@
             this.gbCliente.Controls.Add(this.btnRegresar);
             this.gbCliente.Controls.Add(this.txtfecha_cad);
             this.gbCliente.Controls.Add(this.txtfecha_activo);
-            this.gbCliente.Controls.Add(this.rbModificar);
-            this.gbCliente.Controls.Add(this.rbEliminar);
-            this.gbCliente.Controls.Add(this.rbregistrar);
             this.gbCliente.Controls.Add(this.btnEliminar);
             this.gbCliente.Controls.Add(this.btnSalir);
             this.gbCliente.Controls.Add(this.btnAgregar);
@@ -123,48 +117,6 @@
             this.txtfecha_activo.Name = "txtfecha_activo";
             this.txtfecha_activo.Size = new System.Drawing.Size(151, 20);
             this.txtfecha_activo.TabIndex = 25;
-            // 
-            // rbModificar
-            // 
-            this.rbModificar.AutoSize = true;
-            this.rbModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbModificar.ForeColor = System.Drawing.Color.White;
-            this.rbModificar.Location = new System.Drawing.Point(205, 32);
-            this.rbModificar.Name = "rbModificar";
-            this.rbModificar.Size = new System.Drawing.Size(90, 20);
-            this.rbModificar.TabIndex = 24;
-            this.rbModificar.TabStop = true;
-            this.rbModificar.Text = "Modificar";
-            this.rbModificar.UseVisualStyleBackColor = true;
-            this.rbModificar.CheckedChanged += new System.EventHandler(this.rbModificar_CheckedChanged);
-            // 
-            // rbEliminar
-            // 
-            this.rbEliminar.AutoSize = true;
-            this.rbEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEliminar.ForeColor = System.Drawing.Color.White;
-            this.rbEliminar.Location = new System.Drawing.Point(114, 32);
-            this.rbEliminar.Name = "rbEliminar";
-            this.rbEliminar.Size = new System.Drawing.Size(82, 20);
-            this.rbEliminar.TabIndex = 23;
-            this.rbEliminar.TabStop = true;
-            this.rbEliminar.Text = "Eliminar";
-            this.rbEliminar.UseVisualStyleBackColor = true;
-            this.rbEliminar.CheckedChanged += new System.EventHandler(this.rbEliminar_CheckedChanged);
-            // 
-            // rbregistrar
-            // 
-            this.rbregistrar.AutoSize = true;
-            this.rbregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbregistrar.ForeColor = System.Drawing.Color.White;
-            this.rbregistrar.Location = new System.Drawing.Point(13, 32);
-            this.rbregistrar.Name = "rbregistrar";
-            this.rbregistrar.Size = new System.Drawing.Size(90, 20);
-            this.rbregistrar.TabIndex = 22;
-            this.rbregistrar.TabStop = true;
-            this.rbregistrar.Text = "Registrar";
-            this.rbregistrar.UseVisualStyleBackColor = true;
-            this.rbregistrar.CheckedChanged += new System.EventHandler(this.rbregistrar_CheckedChanged);
             // 
             // btnEliminar
             // 
@@ -414,9 +366,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.RadioButton rbModificar;
-        private System.Windows.Forms.RadioButton rbEliminar;
-        private System.Windows.Forms.RadioButton rbregistrar;
         private System.Windows.Forms.TextBox txtfecha_cad;
         private System.Windows.Forms.TextBox txtfecha_activo;
         private System.Windows.Forms.Button btnRegresar;
