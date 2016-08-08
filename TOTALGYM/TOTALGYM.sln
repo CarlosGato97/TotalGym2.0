@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TotalGymWinFormApp", "TotalGymWinFormApp\TotalGymWinFormApp.csproj", "{E0F04046-20D6-4F9D-9F42-8FAD8FFAB1E1}"
 EndProject
@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{90
 	ProjectSection(SolutionItems) = preProject
 		dbTotalGymESC.sql = dbTotalGymESC.sql
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TotalGymWebApp", "TotalGymWebApp\TotalGymWebApp.csproj", "{D7815EC4-B620-4E8D-86BD-F61CD0C2C4FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,10 +38,6 @@ Global
 		{F2E1E83D-4291-405E-8D60-9EC03783850A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2E1E83D-4291-405E-8D60-9EC03783850A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2E1E83D-4291-405E-8D60-9EC03783850A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7815EC4-B620-4E8D-86BD-F61CD0C2C4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7815EC4-B620-4E8D-86BD-F61CD0C2C4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7815EC4-B620-4E8D-86BD-F61CD0C2C4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7815EC4-B620-4E8D-86BD-F61CD0C2C4FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

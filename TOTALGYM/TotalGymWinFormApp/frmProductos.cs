@@ -119,7 +119,7 @@ namespace TotalGymWinFormApp
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow grid = dataGridView1.Rows[e.RowIndex];
+                DataGridViewRow grid = dataGridView1.Rows[e.RowIndex];
 
             
             txtcodigopro.Text = grid.Cells[0].Value.ToString();

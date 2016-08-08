@@ -12,10 +12,6 @@ namespace TotalGymWinFormApp
 {
     class CLIENTE
     {
-       
-     
-       
-    
             SqlConnection cn = new SqlConnection("Data Source=.;Initial Catalog=TOTALGYM;Integrated Security=True");
            
             private SqlCommandBuilder cmb;
